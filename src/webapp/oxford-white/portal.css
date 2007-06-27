@@ -26,7 +26,7 @@ body{
 	overflow:hidden;
 }
 #headerMin{
-	border-bottom:2px solid #006
+	border-bottom:1px solid #000
 }
 
 /*accessibility links wrapper */
@@ -103,7 +103,7 @@ site types are a local setting - adjust */
 	width: auto;
 	clear: both;
 	top: 0;
-	border-top: 1px solid #006;
+	border-top: 1px solid #000;
 	text-align: center;
 }
 
@@ -156,7 +156,6 @@ site types are a local setting - adjust */
 /*wrapper for mast head elements - children are 3 blocks - #mastLogo,#mastBanner,#mastLogin*/
 #mastHead{
 	clear: both;
-	background: #006;
 	float: left;
 	width: 100%
 }
@@ -166,7 +165,6 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #mastLogo{
 	float: left;
 	width: auto;
-	background: #006;
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
@@ -193,7 +191,6 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	padding-right: 15px;
 	vertical-align: top;
 	clear: both;
-	background: #ffffff;
 	width: 100%;
 }
 
@@ -270,8 +267,8 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	padding: 0;
 	margin: 0;
 	float: left;
-	border-top: 1px solid #006;
-	border-bottom: 1px solid #006;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
 	clear:both;
 }
 
