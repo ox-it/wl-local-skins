@@ -139,13 +139,13 @@ site types are a local setting - adjust */
 /*depending on site type - different border-bottoms for the site menu parent block
 site types are a local setting - adjust */
 .workspace .siteNavWrap{
-	border-bottom:3px solid #ccf;
+	border-bottom:3px solid #ddd;
 }
 .course .siteNavWrap{
-	border-bottom:3px solid #ccf;
+	border-bottom:3px solid #ddd;
 }
 .project .siteNavWrap{
-	border-bottom:3px solid #ccf;
+	border-bottom:3px solid #ddd;
 }
 #siteNavWrapper{
 	margin: 0;
@@ -263,7 +263,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 so for example <div class="tabHolder workspace"> so that different site types can be treated differently via inheritance - children are #siteNavWrap and #navBottom*/
 .siteNavWrap{
 	width: 100%;
-	background: #CCF;
+	background: #ddd;
 	padding: 0;
 	margin: 0;
 	float: left;
