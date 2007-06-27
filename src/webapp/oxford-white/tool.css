@@ -643,6 +643,11 @@ textarea:focus{
 	left: -.5em;
 	position: relative;
 }
+.navIntraTool span.inactive {
+	margin-right:1em;
+	white-space: nowrap;
+	display:inline-block
+}
 
 /*SECTION 9 MESSAGES*/
 /*see: create any item*/
@@ -688,13 +693,12 @@ textarea:focus{
 /*inline blob used to indicate progress (see: upload a resource say)
 visibility gets toggled*/
 #submitnotif{
-	background: #fff url(../images/warn.gif) .3em .3em no-repeat;
+	background: #fff url(../images/warn-a.gif) .3em .3em no-repeat;
 	border: 1px solid #b11;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	clear: none;
 	color: #b11;
 	font-size: small;
-	text-decoration: blink;
 	vertical-align: text-top;
 	margin: 0;
 	padding: 5px 5px 5px 25px;
@@ -788,9 +792,14 @@ table.hierItemBlock td h4,table.hierItemBlock td h5,table.hierItemBlock td h6,
 	width: 83%;
 	padding-bottom: .5em;
 	float: left;
+}
+
+.chatListMonitor {
 	height: 300px;
 	overflow-y: auto;
 	overflow-x: visible;
+	/* This overflow is for Netscape*/
+	overflow: -moz-scrollbars-vertical;
 }
 
 #chatPresenceWrapper, .chatPresenceWrapper{
@@ -1003,9 +1012,11 @@ width:auto !important
 }
 
 /*some definitions overriding tool_base.css for the external xlogin screen*/
-.loginform label{
+.loginform input#submit, .loginform label{
 	color: #000;
 }
+
+
 .login td.logo{
 	width: 11em;
 	background:#fff url(images/logo_inst.gif) 1em 1em no-repeat
