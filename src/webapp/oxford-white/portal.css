@@ -362,7 +362,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 #toolMenu{
 	width: 9.6em;
 	padding: 0;
-	margin: 1em 0 0 0;
+	margin: 1em 0 1em 0;
 	color: #000;
 	background: inherit;
 }
