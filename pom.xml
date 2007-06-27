@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>master</artifactId>
+    <groupId>org.sakaiproject</groupId>
+    <version>M2</version>
+  </parent>
+  <name>Local Skins</name>
+  <groupId>uk.ac.ox.oucs.vle</groupId>
+  <artifactId>local-skins</artifactId>
+  <organization>
+    <name>University of Oxford</name>
+    <url>http://www.oucs.ox.ac.uk/</url>
+  </organization>
+  <inceptionYear>2007</inceptionYear>
+  <packaging>war</packaging>
+  <dependencies/>
+  <build>
+  </build>
+</project>
