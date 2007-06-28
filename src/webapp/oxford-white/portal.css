@@ -156,14 +156,16 @@ site types are a local setting - adjust */
 /*wrapper for mast head elements - children are 3 blocks - #mastLogo,#mastBanner,#mastLogin*/
 #mastHead{
 	clear: both;
-	float: left;
+	position: relative;
 	width: 100%
 }
 
 /*container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastLogo{
-	float: left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 	width: auto;
 }
 
