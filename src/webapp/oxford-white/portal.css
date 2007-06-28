@@ -276,6 +276,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*wrapper for the site links and site <select> blocks - children are #siteNav and #tabNav */
 #siteNav{
+	position: relative;
 	width:100%;
 }
 
@@ -286,8 +287,9 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 #selectNav{
 	padding: .4em .4em .2em .2em;
 	text-align: right;
-	vertical-align: middle;
-	float:right
+	position: absolute;
+	right: 0px;
+	top: 0.1em;
 }
 
 /*the <select> contextually defined*/
