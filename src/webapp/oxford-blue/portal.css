@@ -157,7 +157,6 @@ site types are a local setting - adjust */
 #mastHead{
 	clear: both;
 	background: #006;
-	float: left;
 	width: 100%
 }
 
@@ -188,13 +187,13 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 
 /*container wrapping,depending on Sakai settings:1) a login form,2) a login link for CAS,3) a logout link*/
 #mastLogin{
-	float: right;
 	text-align: right;
-	padding-right: 15px;
 	vertical-align: top;
 	clear: both;
 	background: #ffffff;
-	width: 100%;
+	width: 98%;
+	padding: 2px;
+	padding-right: 2%;
 }
 
 /*the anchor for the login link for CAS above can be an image - treated here*/
@@ -261,6 +260,10 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #loginLink2{
 }
 
+#tabBottom {
+	display: none;
+}
+
 /*PART 4 - SITE NAVIGATION - children of #siteNavBlock*/
 /*outer wrapper for the site navigation blocks - it is a class,not an id because it can be overloaded with other values having to do with site type
 so for example <div class="tabHolder workspace"> so that different site types can be treated differently via inheritance - children are #siteNavWrap and #navBottom*/
@@ -269,7 +272,6 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	background: #CCF;
 	padding: 0;
 	margin: 0;
-	float: left;
 	border-top: 1px solid #006;
 	border-bottom: 1px solid #006;
 	clear:both;
@@ -282,7 +284,6 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*wrapper for the site link list   - the #siteLinkList child)*/
 #linkNav{
-	float:left
 }
 /*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
 #selectNav{
