@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+	<pomVersion>3</pomVersion>
+	<extend>../master/project.xml</extend>
+	<name>Local Skins</name>
+	<groupId>uk.ac.ox.oucs.vle</groupId>
+	<id>local-skins</id>
+	<currentVersion>${sakai.version}</currentVersion>
+	<organization>
+		<name>University of Oxford</name>
+		<url>http://www.oucs.ox.ac.uk/</url>
+	</organization>
+	<inceptionYear>2007</inceptionYear>
+
+	<properties>
+		<deploy.type>war</deploy.type>
+	</properties>
+
+</project>
