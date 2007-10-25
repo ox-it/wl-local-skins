@@ -624,11 +624,13 @@ below they are contextually defined depending on the column as an example,as you
 	width: 100%;
 }
 */
+/* SAK-11632: Padding removes ugly horizontal lines in Firefox when scrolling. */
 .portletMainIframe{
 	text-align: left;
 	margin-bottom: .5em;
 	height: auto;
 	border: none;
+	padding: 0.2em 0em 0em 0em;
 }
 
 /*PART 8 - FOOTER BLOCKS - descendants of #footer TODO - unpack the 3 descendants and make them all children*/
