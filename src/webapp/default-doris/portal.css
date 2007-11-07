@@ -26,11 +26,30 @@ body{
 	overflow:hidden;
 }
 #headerMin{
-	border-bottom:2px solid #09C
+	border-bottom:1px solid #09C
 }
 
 /*accessibility links wrapper */
 #skipNav{
+}
+
+/*site hierarchy breadcrumb*/
+#siteHierarchy{
+        clear:both;
+        float:none;
+        margin:0;
+        list-style: none;
+        padding:.5em 0;
+}
+/*style the standard breadcrumbseparator
+can set display:none if needed because the list-style is taking care of it*/
+.breadSeparator{
+}
+#siteHierarchy li{
+        display:inline;
+}
+#siteHierarchy li a, #siteHierarchy li a:visited{
+        color:#222;
 }
 
 /*wrapper for site content (includes as children #toolMenuWrap,#content and #footer)*/
@@ -137,6 +156,7 @@ site types are a local setting - adjust */
 /*wrapper for mast head elements - children are 3 blocks - #mastLogo,#mastBanner,#mastLogin*/
 #mastHead{
 	clear: both;
+	width: 100%
 }
 
 /*container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
@@ -148,28 +168,29 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
 #mastLogo img{
-	margin: 1em .5em;
+	margin: .3em .5em;
 }
 
 /*another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastBanner{
-	width: auto;
 	vertical-align: top;
-	float: left;
+	float: right;
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
 #mastBanner img{
-	margin: 1em .5em;
+	margin: .3em .5em;
 }
 
 /*container wrapping,depending on Sakai settings:1) a login form,2) a login link for CAS,3) a logout link*/
 #mastLogin{
-	float: right;
 	text-align: right;
-	padding-right: 15px;
 	vertical-align: top;
+	clear: both;
+	width: 98%;
+	padding: 2px;
+	padding-right: 2%;
 }
 
 /*the anchor for the login link for CAS above can be an image - treated here*/
@@ -194,7 +215,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 
 #loginForm is the form for login - contains children #eid #pw #submit*/
 #loginForm{
-	margin: 1em 0;
+	margin: 0.4em 0;
 }
 
 #eid{
@@ -225,7 +246,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 
 /*block for login/logout links */
 #loginLinks{
-	margin: 1em 0 2em 0;
+	margin: 0.4em 0 0.4em 0;
 }
 
 /*main CAS link*/
@@ -236,34 +257,39 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #loginLink2{
 }
 
+#tabBottom {
+	display: none;
+}
+
 /*PART 4 - SITE NAVIGATION - children of #siteNavBlock*/
 /*outer wrapper for the site navigation blocks - it is a class,not an id because it can be overloaded with other values having to do with site type
 so for example <div class="tabHolder workspace"> so that different site types can be treated differently via inheritance - children are #siteNavWrap and #navBottom*/
 .siteNavWrap{
 	width: 100%;
-	background: #09c url(images/sitenavback.jpg) top left repeat-x;
+	background: #09c;
 	padding: 0;
 	margin: 0;
-	float: left;
 	border-top: 1px solid #09c;
+	border-bottom: 1px solid #09c;
 	clear:both;
 }
 
 /*wrapper for the site links and site <select> blocks - children are #siteNav and #tabNav */
 #siteNav{
+	position: relative;
 	width:100%;
 }
 
 /*wrapper for the site link list   - the #siteLinkList child)*/
 #linkNav{
-	float:left
 }
 /*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
 #selectNav{
 	padding: .4em .4em .2em .2em;
 	text-align: right;
-	vertical-align: middle;
-	float:right
+	position: absolute;
+	right: 0px;
+	top: 0.1em;
 }
 
 /*the <select> contextually defined*/
@@ -339,7 +365,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 #toolMenu{
 	width: 9.6em;
 	padding: 0;
-	margin: 1em 0 0 0;
+	margin: 1em 0 1em 0;
 	color: #000;
 	background: inherit;
 }
@@ -365,6 +391,19 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 also hide if are going to be using icon links (as background of <a> nad <li>
 */
 
+#toolMenu li.selectedTool span{
+	display: block;
+	padding-bottom : 2px;
+    padding-left : 18px !important;
+    padding-right : 0px;
+    padding-top : 2px;
+    margin-bottom : 0px;
+    margin-left : 0px;
+    margin-right : 0px;
+    margin-top : 0px;
+    background-position : center left !important;
+    background-repeat : no-repeat !important;
+}
 #toolMenu li span{
 /*comment this line for a return to sanity
 display:none*/
@@ -376,7 +415,17 @@ display:none*/
 	display: block;
 	text-decoration: underline;
 	color: #09c;
-	padding: 2px 0px 2px 4px;
+	padding-bottom : 2px;
+    padding-left : 18px !important;
+    padding-right : 0px;
+    padding-top : 2px;
+    margin-bottom : 0px;
+    margin-left : 0px;
+    margin-right : 0px;
+    margin-top : 0px;
+    background-position : center left !important;
+    background-repeat : no-repeat !important;
+    
 
 }
 #toolMenu li a:hover{
@@ -523,6 +572,7 @@ below they are contextually defined depending on the column as an example,as you
 
 .portletTitle .title a{
 	background: url(images/reload.gif) center left no-repeat;
+	text-decoration: none !important;
 }
 
 .portletTitle .title a:hover{
@@ -544,6 +594,7 @@ below they are contextually defined depending on the column as an example,as you
 
 .portletTitle .action a{
 	background: url(images/help.gif) center right no-repeat;
+	text-decoration: none !important;
 }
 
 .portletTitle .action a:hover{
@@ -621,4 +672,152 @@ below they are contextually defined depending on the column as an example,as you
 	left: -999px;
 	height: 0;
 
+}
+
+/* PART 9 - Tool Icons */
+
+.icon-sakai-profile {
+	background-image : url(../../image/silk/vcard_edit.png);
+}
+
+.icon-sakai-search {
+	background-image : url(../../image/silk/find.png);
+}
+
+.icon-sakai-dropbox {
+	background-image : url(../../image/silk/folder_page.png);
+}
+
+.icon-sakai-discussion {
+	background-image : url(../../image/silk/comments.png);
+}
+
+.icon-sakai-presentation {
+	background-image : url(../../image/silk/monitor.png);
+}
+
+.icon-sakai-sitestats {
+	background-image : url(../../image/silk/chart_bar.png);
+}
+
+.icon-sakai-news {
+	background-image : url(../../image/silk/rss.png);
+}
+
+.icon-sakai-mailbox {
+	background-image : url(../../image/silk/email.png);
+}
+
+.icon-sakai-iframe-site {
+	background-image : url(../../image/silk/house.png);
+}
+
+.icon-sakai-iframe {
+	background-image : url(../../image/silk/page_world.png);
+}
+	
+.icon-sakai-rwiki {
+	background-image : url(../../image/silk/page_white_edit.png);
+}
+
+.icon-sakai-siteinfo {
+	background-image : url(../../image/silk/wrench.png);
+}
+
+.icon-sakai-announcements {
+	background-image : url(../../image/silk/flag_blue.png);
+}
+
+.icon-sakai-assignment-grades {
+	background-image : url(../../image/silk/hourglass.png);
+}
+
+.icon-sakai-site-roster {
+	background-image : url(../../image/silk/vcard.png);
+}
+
+.icon-sakai-schedule {
+	background-image : url(../../image/silk/calendar.png);
+}
+
+.icon-sakai-chat {
+	background-image : url(../../image/silk/user_comment.png);
+}
+
+.icon-sakai-resources {
+	background-image : url(../../image/silk/folder.png);
+}
+
+.icon-sakai-samigo {
+	background-image : url(../../image/silk/pencil.png);
+}
+
+.icon-sakai-help {
+	background-image : url(../../image/silk/help.png);
+}
+
+
+
+.icon-sakai-syllabus {
+/*	background-image : url(../../image/silk/new.png); */
+} 
+.icon-sakai-assignment-grades {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-gradebook-tool {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-sections {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-blogger {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-evaluation {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-metaobj {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-forums {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-glossary {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-rutgers-linktool {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-mailtool {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-matrix {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-messages {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-podcasts {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-poll {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-presLayout {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-presTemplate {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-postem {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-reports {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-style {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-wizard {
+/*	background-image : url(../../image/silk/new.png); */
 }
