@@ -156,13 +156,15 @@ site types are a local setting - adjust */
 /*wrapper for mast head elements - children are 3 blocks - #mastLogo,#mastBanner,#mastLogin*/
 #mastHead{
 	clear: both;
-	width: 100%
+	width: 100%;
+	position: relative; /* Container for absolute mastLogo */
+	text-align: right; /* Make logo appear on right */
 }
 
 /*container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastLogo{
-	float: left;
+	position: absolute; /* Remove from affecting mastBanner */
 	width: auto;
 }
 
@@ -175,12 +177,11 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastBanner{
 	vertical-align: top;
-	float: right;
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
 #mastBanner img{
-	margin: .3em .5em;
+	margin: .3em .5em .3em 500px; /* Ensure we never overlap the mastLogo */
 	padding: 5px 0px;
 }
 
