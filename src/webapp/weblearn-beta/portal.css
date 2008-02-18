@@ -165,6 +165,8 @@ site types are a local setting - adjust */
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastLogo{
 	position: absolute; /* Remove from affecting mastBanner */
+	left: 0px;
+	top: 0px;
 	width: auto;
 }
 
