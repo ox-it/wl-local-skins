@@ -583,8 +583,8 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	text-decoration: underline;
 	color: #09c;
 	padding-bottom : 2px;
-    padding-left : 23px !important;
-    padding-right : 0px;
+    padding-left : 0px;
+    padding-right : 23px !important;
     padding-top : 2px;
     margin-bottom : 0px;
     margin-left : 0px;
