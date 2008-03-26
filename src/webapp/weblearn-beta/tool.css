@@ -70,6 +70,18 @@ tr.selectedMove a:link,tr.selectedMove a:visited{
 	color: silver;
 }
 
+/*used as background class for recent items in dropbox, anywhere*/
+.recentItem{
+	padding:2px;
+	background: url(images/new_item_back.gif) top right no-repeat;
+	_display:inline-block;
+	_margin-left:-1.5em;
+	white-space: nowrap;
+}	
+.recentItem a:link{
+	text-decoration: none !important;
+}
+
 /*links associated with an item in alist*/
 /*see links below announcement title in ann list*/
 .itemAction  a,.itemAction  a:link{
@@ -648,6 +660,11 @@ textarea:focus{
 	white-space: nowrap;
 	display:inline-block
 }
+.navIntraTool span.inactive {
+	margin-right:1em;
+	white-space: nowrap;
+	display:inline-block
+}
 
 /*SECTION 9 MESSAGES*/
 /*see: create any item*/
@@ -796,6 +813,7 @@ table.hierItemBlock td h4,table.hierItemBlock td h5,table.hierItemBlock td h6,
 
 .chatListMonitor {
 	height: 300px;
+	overflow: auto;
 	overflow-y: auto;
 	overflow-x: visible;
 	/* This overflow is for Netscape*/
@@ -1052,7 +1070,7 @@ right now "namespaced" for mneme only to avoid any possible conflicts*/
 
 ul.makeMenu, ul.makeMenu ul {
   width: auto;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd !important;
   background:#fff; 
   padding: 3px;
   padding-left: 6px;
@@ -1065,7 +1083,7 @@ ul.makeMenu, ul.makeMenu ul {
 	white-space: nowrap;
 }
 ul.makeMenu:hover{
-	border:1px solid #666;
+	border:1px solid #666  !important;
 }	
 .listHier ul.makeMenu img{
 	margin-right: 0;
@@ -1076,7 +1094,7 @@ ul.makeMenu li {
   list-style-type: none;
   margin: 0px;
   position: relative;
-  color: #000000;
+  color: #000000 !important;
  display:inline;
 }
 ul.makeMenu li > ul {
@@ -1086,7 +1104,7 @@ ul.makeMenu li > ul {
   left: 0;
 }
 ul.makeMenu li:hover, ul.makeMenu li.CSStoHighlight {
-  color: #000;
+  color: #000  !important;
 }
 ul.makeMenu ul.CSStoShow {
   display: block;
@@ -1097,11 +1115,11 @@ ul.makeMenu li:hover > ul {
 	background-color:#ffffff;
 	background-image:none;
 	position:absolute;
-	border:1px solid #666;
+	border:1px solid #666 !important;
 	margin-top:9px;
  	z-index:3
 }
-ul.makeMenu li a { display: block; width: 100%; text-decoration: underline;   padding:6px; }
-ul.makeMenu li a:hover, ul.makeMenu li a.CSStoHighLink { color: #000; }
+ul.makeMenu li a { display: block; width: 100%; text-decoration: underline;   padding:6px; color:#35B !important}
+ul.makeMenu li a:hover, ul.makeMenu li a.CSStoHighLink { color: #000 !important; }
 ul.makeMenu li:hover > a { color: #000; }
 
