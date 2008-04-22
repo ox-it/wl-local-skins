@@ -341,7 +341,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	background: transparent url(images/tab-left.gif) no-repeat scroll left top;
 	margin: 0 2px 0 0;
 	padding: 0 0 0 11px;
-	border-bottom: 2px solid #013F68;
+	border-bottom: 2px solid #777;
 }
 
 #siteLinkList li a:hover {
@@ -431,7 +431,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	right: 4px;
 	line-height: 1.5em;
 	background-color: #FFFFFF; 
-	border: 2px solid #013F68;
+	border: 2px solid #333;
 	border-top-width: 0;
 	width: 75%;
 	z-index: 9999;
