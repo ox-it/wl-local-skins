@@ -16,6 +16,11 @@
   </organization>
   <inceptionYear>2007</inceptionYear>
   <packaging>war</packaging>
+  <scm>
+    <developerConnection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins</developerConnection>
+    <connection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins</connection>
+    <url>https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins</url>
+  </scm>
   <dependencies />
   <build>
   </build>
