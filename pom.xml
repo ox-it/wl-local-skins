@@ -9,7 +9,7 @@
   <name>Local Skins</name>
   <groupId>uk.ac.ox.oucs.vle</groupId>
   <artifactId>local-skins</artifactId>
-  <version>1.1</version>
+  <version>1.1-SNAPSHOT</version>
   <organization>
     <name>University of Oxford</name>
     <url>http://www.oucs.ox.ac.uk/</url>
@@ -17,9 +17,9 @@
   <inceptionYear>2007</inceptionYear>
   <packaging>war</packaging>
   <scm>
-    <developerConnection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.1</developerConnection>
-    <connection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.1</connection>
-    <url>https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.1</url>
+    <developerConnection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins</developerConnection>
+    <connection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins</connection>
+    <url>https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins</url>
   </scm>
   <dependencies />
   <build>
