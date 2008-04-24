@@ -16,6 +16,17 @@
   </organization>
   <inceptionYear>2007</inceptionYear>
   <packaging>war</packaging>
+  <repositories>
+    <repository>
+      <id>oucs-vle</id>
+      <name>OUCS VLE Repository</name>
+      <layout>default</layout>
+      <url>http://perch.oucs.ox.ac.uk:10080/archiva/repository/internal/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
   <scm>
     <developerConnection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/trunk</developerConnection>
     <connection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/trunk</connection>
