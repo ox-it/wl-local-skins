@@ -6,8 +6,8 @@
     <artifactId>oxford-master</artifactId>
     <version>1.1</version>
   </parent>
-  <name>Local Skins</name>
-  <groupId>uk.ac.ox.oucs.vle</groupId>
+  <name>Oxford Skins</name>
+  <groupId>uk.ac.ox.oucs</groupId>
   <artifactId>local-skins</artifactId>
   <version>1.2-SNAPSHOT</version>
   <organization>
