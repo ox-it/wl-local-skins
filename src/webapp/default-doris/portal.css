@@ -49,25 +49,6 @@ can set display:none if needed because the list-style is taking care of it*/
         display:inline;
 }
 #siteHierarchy li a, #siteHierarchy li a:visited{
-        color:#222;
-}
-
-/*site hierarchy breadcrumb*/
-#siteHierarchy{
-        clear:both;
-        float:none;
-        margin:0;
-        list-style: none;
-        padding:.5em 0;
-}
-/*style the standard breadcrumbseparator
-can set display:none if needed because the list-style is taking care of it*/
-.breadSeparator{
-}
-#siteHierarchy li{
-        display:inline;
-}
-#siteHierarchy li a, #siteHierarchy li a:visited{
         color:#09c;
 }
 
@@ -296,17 +277,15 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	z-index: 2000;
 }
 
-/*wrapper for the site links and site <select> blocks - children are #siteNav and #tabNav */
-#siteNav{
-	position: relative;
+/*wrapper for the site links and site <select> blocks - children are .siteNav and #tabNav */
+.siteNav{
 	width:100%;
 }
 
-/*wrapper for the site link list   - the #siteLinkList child)*/
-#linkNav{
+/*wrapper for the site link list   - the .siteLinkList child)*/
+.linkNav{
 	position: relative;
 	display: block;
-	float:left;
 }
 
 /*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
@@ -332,7 +311,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 }
 
 /*a ul - the li below are outer wrappers for the links to sites */
-#siteLinkList{
+.siteLinkList{
 	white-space: nowrap;
 	list-style-image:none;
 	list-style-position:outside;
@@ -343,14 +322,14 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 }
 
 /*list elements - children are <span> and <a>*/
-#siteLinkList li {
+.siteLinkList li {
 	position: relative;
 	display:block;
 	float:left;
 }
 
 /*links to other sites*/
-#siteLinkList li a, #siteLinkList li a:link, #siteLinkList li a:visited {
+.siteLinkList li a, .siteLinkList li a:link, .siteLinkList li a:visited {
 	color: #FFF;
 	text-decoration: none;
 	display: block;
@@ -361,11 +340,11 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	border-bottom: 2px solid #013F68;
 }
 
-#siteLinkList li a:hover {
+.siteLinkList li a:hover {
 	text-decoration: underline;
 }
 
-#siteLinkList li span {
+.siteLinkList li span {
 	display: block;
 	background: transparent url(images/tab-right.gif) no-repeat right top;
 	padding: 8px 13px 3px 2px;
@@ -374,10 +353,10 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*the current sites' link - consists of the li and a*/
 
-#siteLinkList li.selectedTab a,
-	#siteLinkList li.selectedTab a:link,
-	#siteLinkList li.selectedTab a:visited,
-	#siteLinkList li.selectedTab a:hover {
+.siteLinkList li.selectedTab a,
+	.siteLinkList li.selectedTab a:link,
+	.siteLinkList li.selectedTab a:visited,
+	.siteLinkList li.selectedTab a:hover {
 	color: #000;
 	font-weight: bolder;
 	text-decoration: none;
@@ -385,26 +364,26 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	border-width: 0;
 }
 
-#siteLinkList li.selectedTab a span{
+.siteLinkList li.selectedTab a span{
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
 	padding: 8px 11px 5px 0;
 }
 
-#siteLinkList li.tab-dim a,
-	#siteLinkList li.tab-dim a:link,
-	#siteLinkList li.tab-dim a:visited,
-	#siteLinkList li.tab-dim a:hover {
+.siteLinkList li.tab-dim a,
+	.siteLinkList li.tab-dim a:link,
+	.siteLinkList li.tab-dim a:visited,
+	.siteLinkList li.tab-dim a:hover {
 	color: #666;
 	background: transparent url(images/tab-left-selected.gif) no-repeat scroll left top;
 }
 
-#siteLinkList li.tab-dim a span {
+.siteLinkList li.tab-dim a span {
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
 	padding-bottom: 3px;
 }
 
 /* more tab */
-#siteLinkList li.more-tab a span.inner {
+.siteLinkList li.more-tab a span.inner {
 	background-image:  url(images/tab-arrow-down.gif);
 	background-repeat: no-repeat;
 	background-position: 100% 36%;
@@ -412,9 +391,9 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	margin: 0;
 }
 
-#siteLinkList li.more-active a,
-	#siteLinkList li.more-active a:link,
-	#siteLinkList li.more-active a:visited {
+.siteLinkList li.more-active a,
+	.siteLinkList li.more-active a:link,
+	.siteLinkList li.more-active a:visited {
 	color:#000000;
 	font-weight: bolder;
 	text-decoration: none;
@@ -422,17 +401,21 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	border-width: 0;
 }
 
-#siteLinkList li.more-active a:hover {
+.siteLinkList li.more-active a:hover {
 	text-decoration: underline;
 }
 
-#siteLinkList li.more-active a span {
+.siteLinkList li.more-active a span {
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
 	padding-bottom: 5px;
 }
 
-#siteLinkList li.more-active a span.inner {
+.siteLinkList li.more-active a span.inner {
 	background-image: url(images/tab-arrow-down-active.gif);
+}
+
+.personalSites {
+	float: right;
 }
 
 .fixTabsIE{
@@ -526,15 +509,15 @@ html>body .dhtml_more_tabs {
 
 /*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
 /*wrapper for ul that lists the links to tools*/
-#toolMenu{
+.toolMenu {
 	width: 11em;
 	padding: 0;
-	margin: 1em 0 1em 0;
+	margin: 1em 0 0 0;
 	color: #000;
 	background: inherit;
 }
 
-#toolMenu ul{
+.toolMenu ul{
 	width:auto;
 	list-style: none;
 	margin: 0;
@@ -542,7 +525,7 @@ html>body .dhtml_more_tabs {
 	padding-left: 0;
 }
 
-#toolMenu li{
+.toolMenu li{
 
 	margin: 0;
 	width: auto;
@@ -555,7 +538,7 @@ html>body .dhtml_more_tabs {
 also hide if are going to be using icon links (as background of <a> nad <li>
 */
 
-#toolMenu li.selectedTool span{
+.toolMenu li.selectedTool span{
 	display: block;
 	padding-bottom : 2px;
     padding-right : 23px !important;
@@ -572,18 +555,16 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	
 }
 
-#toolMenu li span{
+.toolMenu li span{
 
 }
 
 
-
-#toolMenu li a:link,#toolMenu li a{
+.toolMenu li a:link,.toolMenu li a{
 	display: block;
 	text-decoration: underline;
 	color: #09c;
 	padding-bottom : 2px;
-    padding-left : 0px;
     padding-right : 23px !important;
     padding-top : 2px;
     margin-bottom : 0px;
@@ -595,18 +576,18 @@ also hide if are going to be using icon links (as background of <a> nad <li>
     
 
 }
-#toolMenu li a:hover{
+.toolMenu li a:hover{
 	text-decoration: none;
 	color: #09c;
 }
 
-#toolMenu li a.selected{
+.toolMenu li a.selected{
 	text-decoration: none;
 	color: #000;
 	cursor: text;
 }
 
-#toolMenu li a.selected:hover{
+.toolMenu li a.selected:hover{
 	text-decoration: none;
 	color: #000;
 	cursor: text;
@@ -841,154 +822,6 @@ below they are contextually defined depending on the column as an example,as you
 	left: -999px;
 	height: 0;
 
-}
-
-/* PART 9 - Tool Icons */
-
-.icon-sakai-profile {
-	background-image : url(/library/image/silk/vcard_edit.png);
-}
-
-.icon-sakai-search {
-	background-image : url(/library/image/silk/find.png);
-}
-
-.icon-sakai-dropbox {
-	background-image : url(/library/image/silk/folder_page.png);
-}
-
-.icon-sakai-discussion {
-	background-image : url(/library/image/silk/comments.png);
-}
-
-.icon-sakai-presentation {
-	background-image : url(/library/image/silk/monitor.png);
-}
-
-.icon-sakai-sitestats {
-	background-image : url(/library/image/silk/chart_bar.png);
-}
-
-.icon-sakai-news {
-	background-image : url(/library/image/silk/rss.png);
-}
-
-.icon-sakai-mailbox {
-	background-image : url(/library/image/silk/email.png);
-}
-
-.icon-sakai-iframe-site {
-	background-image : url(/library/image/silk/house.png);
-}
-
-.icon-sakai-iframe {
-	background-image : url(/library/image/silk/page_world.png);
-}
-	
-.icon-sakai-rwiki {
-	background-image : url(/library/image/silk/page_white_edit.png);
-}
-
-.icon-sakai-siteinfo {
-	background-image : url(/library/image/silk/wrench.png);
-}
-
-.icon-sakai-announcements {
-	background-image : url(/library/image/silk/flag_blue.png);
-}
-
-.icon-sakai-assignment-grades {
-	background-image : url(/library/image/silk/hourglass.png);
-}
-
-.icon-sakai-site-roster {
-	background-image : url(/library/image/silk/vcard.png);
-}
-
-.icon-sakai-schedule {
-	background-image : url(/library/image/silk/calendar.png);
-}
-
-.icon-sakai-chat {
-	background-image : url(/library/image/silk/user_comment.png);
-}
-
-.icon-sakai-resources {
-	background-image : url(/library/image/silk/folder.png);
-}
-
-.icon-sakai-samigo {
-	background-image : url(/library/image/silk/pencil.png);
-}
-
-.icon-sakai-help {
-	background-image : url(/library/image/silk/help.png);
-}
-
-
-
-.icon-sakai-syllabus {
-/*	background-image : url(/library/image/silk/new.png); */
-} 
-.icon-sakai-assignment-grades {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-gradebook-tool {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-sections {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-blogger {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-evaluation {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-metaobj {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-forums {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-glossary {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-rutgers-linktool {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-mailtool {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-matrix {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-messages {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-podcasts {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-poll {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-presLayout {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-presTemplate {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-sakai-postem {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-reports {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-style {
-/*	background-image : url(/library/image/silk/new.png); */
-}
-.icon-osp-wizard {
-/*	background-image : url(/library/image/silk/new.png); */
 }
 
 /* PART 9 - Tool Icons */
