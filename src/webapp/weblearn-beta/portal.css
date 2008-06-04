@@ -139,13 +139,13 @@ site types are a local setting - adjust */
 /*depending on site type - different border-bottoms for the site menu parent block
 site types are a local setting - adjust */
 .workspace .siteNavWrap{
-	border-bottom:3px solid #ddd;
+	border-bottom:3px solid #333;
 }
 .course .siteNavWrap{
-	border-bottom:3px solid #ddd;
+	border-bottom:3px solid #333;
 }
 .project .siteNavWrap{
-	border-bottom:3px solid #ddd;
+	border-bottom:3px solid #333;
 }
 #siteNavWrapper{
 	margin: 0;
@@ -261,10 +261,6 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #loginLink2{
 }
 
-#tabBottom {
-	display: none;
-}
-
 /*PART 4 - SITE NAVIGATION - children of #siteNavBlock*/
 /*outer wrapper for the site navigation blocks - it is a class,not an id because it can be overloaded with other values having to do with site type
 so for example <div class="tabHolder workspace"> so that different site types can be treated differently via inheritance - children are #siteNavWrap and #navBottom*/
@@ -280,16 +276,15 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	z-index: 2000;
 }
 
-/*wrapper for the site links and site <select> blocks - children are #siteNav and #tabNav */
-#siteNav{
+/*wrapper for the site links and site <select> blocks - children are .siteNav and #tabNav */
+.siteNav{
 	width:100%;
 }
 
-/*wrapper for the site link list   - the #siteLinkList child)*/
-#linkNav{
+/*wrapper for the site link list   - the .siteLinkList child)*/
+.linkNav{
 	position: relative;
 	display: block;
-	float:left;
 }
 
 /*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
@@ -315,7 +310,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 }
 
 /*a ul - the li below are outer wrappers for the links to sites */
-#siteLinkList{
+.siteLinkList{
 	white-space: nowrap;
 	list-style-image:none;
 	list-style-position:outside;
@@ -326,14 +321,14 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 }
 
 /*list elements - children are <span> and <a>*/
-#siteLinkList li {
+.siteLinkList li {
 	position: relative;
 	display:block;
 	float:left;
 }
 
 /*links to other sites*/
-#siteLinkList li a, #siteLinkList li a:link, #siteLinkList li a:visited {
+.siteLinkList li a, .siteLinkList li a:link, .siteLinkList li a:visited {
 	color: #FFF;
 	text-decoration: none;
 	display: block;
@@ -341,14 +336,14 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	background: transparent url(images/tab-left.gif) no-repeat scroll left top;
 	margin: 0 2px 0 0;
 	padding: 0 0 0 11px;
-	border-bottom: 2px solid #777;
+	border-bottom: 2px solid #333;
 }
 
-#siteLinkList li a:hover {
+.siteLinkList li a:hover {
 	text-decoration: underline;
 }
 
-#siteLinkList li span {
+.siteLinkList li span {
 	display: block;
 	background: transparent url(images/tab-right.gif) no-repeat right top;
 	padding: 8px 13px 3px 2px;
@@ -357,10 +352,10 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*the current sites' link - consists of the li and a*/
 
-#siteLinkList li.selectedTab a,
-	#siteLinkList li.selectedTab a:link,
-	#siteLinkList li.selectedTab a:visited,
-	#siteLinkList li.selectedTab a:hover {
+.siteLinkList li.selectedTab a,
+	.siteLinkList li.selectedTab a:link,
+	.siteLinkList li.selectedTab a:visited,
+	.siteLinkList li.selectedTab a:hover {
 	color: #000;
 	font-weight: bolder;
 	text-decoration: none;
@@ -368,26 +363,26 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	border-width: 0;
 }
 
-#siteLinkList li.selectedTab a span{
+.siteLinkList li.selectedTab a span{
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
 	padding: 8px 11px 5px 0;
 }
 
-#siteLinkList li.tab-dim a,
-	#siteLinkList li.tab-dim a:link,
-	#siteLinkList li.tab-dim a:visited,
-	#siteLinkList li.tab-dim a:hover {
+.siteLinkList li.tab-dim a,
+	.siteLinkList li.tab-dim a:link,
+	.siteLinkList li.tab-dim a:visited,
+	.siteLinkList li.tab-dim a:hover {
 	color: #666;
 	background: transparent url(images/tab-left-selected.gif) no-repeat scroll left top;
 }
 
-#siteLinkList li.tab-dim a span {
+.siteLinkList li.tab-dim a span {
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
 	padding-bottom: 3px;
 }
 
 /* more tab */
-#siteLinkList li.more-tab a span.inner {
+.siteLinkList li.more-tab a span.inner {
 	background-image:  url(images/tab-arrow-down.gif);
 	background-repeat: no-repeat;
 	background-position: 100% 36%;
@@ -395,9 +390,9 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	margin: 0;
 }
 
-#siteLinkList li.more-active a,
-	#siteLinkList li.more-active a:link,
-	#siteLinkList li.more-active a:visited {
+.siteLinkList li.more-active a,
+	.siteLinkList li.more-active a:link,
+	.siteLinkList li.more-active a:visited {
 	color:#000000;
 	font-weight: bolder;
 	text-decoration: none;
@@ -405,17 +400,21 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	border-width: 0;
 }
 
-#siteLinkList li.more-active a:hover {
+.siteLinkList li.more-active a:hover {
 	text-decoration: underline;
 }
 
-#siteLinkList li.more-active a span {
+.siteLinkList li.more-active a span {
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
 	padding-bottom: 5px;
 }
 
-#siteLinkList li.more-active a span.inner {
+.siteLinkList li.more-active a span.inner {
 	background-image: url(images/tab-arrow-down-active.gif);
+}
+
+.personalSites {
+	float: right;
 }
 
 .fixTabsIE{
@@ -509,7 +508,7 @@ html>body .dhtml_more_tabs {
 
 /*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
 /*wrapper for ul that lists the links to tools*/
-#toolMenu{
+.toolMenu {
 	width: 11em;
 	padding: 0;
 	margin: 1em 0 0 0;
@@ -517,7 +516,7 @@ html>body .dhtml_more_tabs {
 	background: inherit;
 }
 
-#toolMenu ul{
+.toolMenu ul{
 	width:auto;
 	list-style: none;
 	margin: 0;
@@ -525,7 +524,7 @@ html>body .dhtml_more_tabs {
 	padding-left: 0;
 }
 
-#toolMenu li{
+.toolMenu li{
 
 	margin: 0;
 	width: auto;
@@ -538,7 +537,7 @@ html>body .dhtml_more_tabs {
 also hide if are going to be using icon links (as background of <a> nad <li>
 */
 
-#toolMenu li.selectedTool span{
+.toolMenu li.selectedTool span{
 	display: block;
 	padding-bottom : 2px;
     padding-right : 23px !important;
@@ -555,12 +554,12 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	 
 }
 
-#toolMenu li span{
+.toolMenu li span{
 
 }
 
 
-#toolMenu li a:link,#toolMenu li a{
+.toolMenu li a:link,.toolMenu li a{
 	display: block;
 	text-decoration: underline;
 	color: #000;
@@ -576,18 +575,18 @@ also hide if are going to be using icon links (as background of <a> nad <li>
     
 
 }
-#toolMenu li a:hover{
+.toolMenu li a:hover{
 	text-decoration: none;
 	color: #000;
 }
 
-#toolMenu li a.selected{
+.toolMenu li a.selected{
 	text-decoration: none;
 	color: #222;
 	cursor: text;
 }
 
-#toolMenu li a.selected:hover{
+.toolMenu li a.selected:hover{
 	text-decoration: none;
 	color: #222;
 	cursor: text;
