@@ -503,7 +503,7 @@ html>body .dhtml_more_tabs {
 
 /*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
 /*wrapper for ul that lists the links to tools*/
-#toolMenu{
+.toolMenu {
 	width: 11em;
 	padding: 0;
 	margin: 1em 0 0 0;
@@ -511,7 +511,7 @@ html>body .dhtml_more_tabs {
 	background: inherit;
 }
 
-#toolMenu ul{
+.toolMenu ul{
 	width:auto;
 	list-style: none;
 	margin: 0;
@@ -519,7 +519,7 @@ html>body .dhtml_more_tabs {
 	padding-left: 0;
 }
 
-#toolMenu li{
+.toolMenu li{
 
 	margin: 0;
 	width: auto;
@@ -532,7 +532,7 @@ html>body .dhtml_more_tabs {
 also hide if are going to be using icon links (as background of <a> nad <li>
 */
 
-#toolMenu li.selectedTool span{
+.toolMenu li.selectedTool span{
 	display: block;
 	padding-bottom : 2px;
     padding-right : 23px !important;
@@ -549,12 +549,12 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	 
 }
 
-#toolMenu li span{
+.toolMenu li span{
 
 }
 
 
-#toolMenu li a:link,#toolMenu li a{
+.toolMenu li a:link,.toolMenu li a{
 	display: block;
 	text-decoration: underline;
 	color: #09c;
@@ -570,18 +570,18 @@ also hide if are going to be using icon links (as background of <a> nad <li>
     
 
 }
-#toolMenu li a:hover{
+.toolMenu li a:hover{
 	text-decoration: none;
 	color: #09c;
 }
 
-#toolMenu li a.selected{
+.toolMenu li a.selected{
 	text-decoration: none;
 	color: #000;
 	cursor: text;
 }
 
-#toolMenu li a.selected:hover{
+.toolMenu li a.selected:hover{
 	text-decoration: none;
 	color: #000;
 	cursor: text;
