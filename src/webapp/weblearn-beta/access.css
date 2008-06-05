@@ -1,11 +1,44 @@
 /* access.css : Styles for access servlet (/access/) directory listings */
+/*
 .directoryIndex { padding:8px; }
+
 body { font-family: Verdana, Arial, sans-serif; }
+
 h2 { font-size: 1.1em; }
+
 td { 
      padding-right: .5em; 
 }
+
 tr { 
      vertical-align: top; 
 }
+*/
+
+.directoryIndex{
+	width: 100%;
+	padding: 8px;
+	font-family: 'Trebuchet MS',Verdana,sans-serif;
+	font-size:.8em;
+	margin: 0;
+	background: #fff;
+}
+
+table{
+	margin-left: 2em;
+}
+
+td + td {
+	padding-bottom: 10px;
+}
+
+td {
+	display: list-item;
+	list-style-type: none;
+}
+
+td a {
+	font-weight: bold;
+}
+
 
