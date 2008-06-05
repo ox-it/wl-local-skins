@@ -279,6 +279,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*wrapper for the site links and site <select> blocks - children are .siteNav and #tabNav */
 .siteNav{
+	position: relative; /* IE */
 	width:100%;
 }
 
@@ -286,6 +287,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 .linkNav{
 	position: relative;
 	display: block;
+	float: left; /* IE */
 }
 
 /*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
