@@ -171,6 +171,10 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	margin: 1em .5em;
 }
 
+#mastHead img {
+	border: 0px none;
+}
+
 /*another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastBanner{
