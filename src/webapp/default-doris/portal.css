@@ -916,6 +916,14 @@ below they are contextually defined depending on the column as an example,as you
 	background-image: url(/library/image/silk/group.png);
 }
 
+.icon-sakai-mneme {
+	background-image: url(images/mneme.png);
+}
+
+.icon-sakai-mneme-admin {
+	background-image: url(images/mneme-admin.png);
+}
+
 .icon-sakai-news {
 	background-image: url(/library/image/silk/rss.png);
 }
