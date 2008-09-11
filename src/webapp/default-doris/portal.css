@@ -1063,9 +1063,8 @@ below they are contextually defined depending on the column as an example,as you
 .icon-sakai-usermembership{
 	background-image: url(/library/image/silk/drive_user.png);
 }
-
 .icon-sakai-subsite{
-	background-image: url(/library/image/silk/sitemap_color.png);
+	background-image: url(images/subsite.png);
 }
 
 
