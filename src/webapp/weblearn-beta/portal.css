@@ -520,6 +520,7 @@ html>body .dhtml_more_tabs {
 	margin: 1em 0 0 0;
 	color: #000;
 	background: inherit;
+	border:1px solid #cccccc;
 }
 
 .toolMenu ul{
