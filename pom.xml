@@ -9,7 +9,7 @@
   <name>Oxford Skins</name>
   <groupId>uk.ac.ox.oucs</groupId>
   <artifactId>local-skins</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.3</version>
   <organization>
     <name>University of Oxford</name>
     <url>http://www.oucs.ox.ac.uk/</url>
@@ -28,9 +28,9 @@
     </repository>
   </repositories>
   <scm>
-    <developerConnection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/trunk</developerConnection>
-    <connection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/trunk</connection>
-    <url>https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/trunk</url>
+    <developerConnection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.3</developerConnection>
+    <connection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.3</connection>
+    <url>https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.3</url>
   </scm>
   <dependencies />
   <build>
