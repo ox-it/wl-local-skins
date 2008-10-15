@@ -21,7 +21,7 @@
       <id>oucs-vle</id>
       <name>OUCS VLE Repository</name>
       <layout>default</layout>
-      <url>http://perch.oucs.ox.ac.uk:10080/archiva/repository/internal/</url>
+      <url>http://archiva.oucs.ox.ac.uk/archiva/repository/internal/</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
