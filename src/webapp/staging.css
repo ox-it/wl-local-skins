@@ -1,0 +1,6 @@
+/* Local CSS for staging server */
+body {
+        background-image:url('/local-skins/images/staging.png');
+        background-repeat:repeat;
+        background-position: 0px 0px;
+}
