@@ -729,8 +729,17 @@ visibility gets toggled*/
 /*the default action in this control - keep in mind that anything you do to it (except to the font) will make 
 you loose the native buttonishness affordance of the os/browser */
 /*create any item - like an announcement*/
+.act input{
+	color: #222;
+}
 .act .active {
-	color:#27d
+	/*
+	 * original colour
+	 * color:#27d;
+	*/
+	color: #000;
+	font-size: 1em;
+	
 }
 .act .active[disabled="disabled"] {
 	color:gray
