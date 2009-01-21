@@ -5,7 +5,7 @@
 text-decoration: none !important;
 
 }
-.directoryIndex { margin-top:2em;padding:1em}
+.directoryIndex { margin-top:1.3em;padding:1em}
 .directoryIndex .textPanel{
 	font-size: .95em;
 	line-height: 150%;
@@ -38,11 +38,20 @@ text-decoration: none !important;
 .directoryIndex ul li.folder{
 	padding:3px;
 }
+.directoryIndex ul li.folder a{
+	padding-left:21px;
+	background: url(../../image/silk/folder.png) center left no-repeat !important
+}	
+
+.directoryIndex ul li.folder a:hover{
+	padding-left:21px;
+	background: url(../../image/silk/folder_go.png) center left no-repeat !important
+}	
+
 .directoryIndex ul li.upfolder{
 	position:absolute;
 	top:2px;
 	left:2px;
-	margin-bottom:2em;
 }
 .directoryIndex ul li.upfolder a{
 	border:1px solid #ccc;
@@ -122,45 +131,47 @@ p#toggle{text-align: right;margin:0 0 1em 0;font-weight:bold}
 	padding-left:21px;
 	background: url(../../image/sakai/generic.gif) center left no-repeat;
 	}
-a[href*='.doc'], a[href*='.rtf']{
-	background: url(../../image/sakai/word.gif) center left no-repeat !important
+/*file exensions to match*/
+.doc, .rtf, .docx, .docm, .dotx, .dotm {
+	background: url(../../image/sakai/doc.gif) center left no-repeat !important
 	}
-a[href*='.ppt'], a[href*='.pps']{
+.ppt, .pps, .pptx, .pptm, .ppsx, .potx, .potm, .ppam {
 	background: url(../../image/sakai/ppt.gif) center left no-repeat !important
 	}
-a[href*='.xls'], a[href*='.csv']{
+.xls, .xlsx, .csv, .xlsx, .xlsm, .xltx, .xltm, .xlsb, .xlam{
 	background: url(../../image/sakai/excel.gif) center left no-repeat !important
 	}	
-a[href*='.mdb']{
+.mdb{
 	background: url(../../image/sakai/access.gif) center left no-repeat !important
 	}	
-a[href*='.gif'], a[href*='.jpg'], a[href*='.png']{
+.gif, .jpg, .jpeg, .png{
 	background: url(../../image/sakai/image.gif) center left no-repeat !important
 	}
-a[href*='.html']{
+.html, .htm{
 	background: url(../../image/sakai/html.gif) center left no-repeat !important
 	}
-a[href*='.txt'], a[href*='.java']{
+.txt, .java{
 	background: url(../../image/sakai/text.gif) center left no-repeat !important
 	}
-a[href*='.zip'], a[href*='.tar'], a[href*='.sit'], a[href*='.hqx'] {
+.zip, .tar, .sit, .hqx {
 	background: url(../../image/sakai/compressed.gif) center left no-repeat !important
 	}
-a[href*='.mov'], a[href*='.mpeg'], a[href*='.sit'] {
+.mov, .mpeg, .avi {
 	background: url(../../image/sakai/movie.gif) center left no-repeat !important
 	}
-a[href*='.mp3'], a[href*='.wav']{
+.mp3, .wav, .aiff{
 	background: url(../../image/sakai/audio.gif) center left no-repeat !important
 	}
-a[href*='.pdf']{
+.pdf{
 	background: url(../../image/sakai/pdf.gif) center left no-repeat !important
 	}
-a[href*='.ai'], a[href*='.ps'], a[href*='.psd']{
+.ai, .ps, .psd{
 	background: url(../../image/sakai/postscript.gif) center left no-repeat !important
 	}
-a[href*='.ram'], a[href*='.rm']{
+.ram, .rm{
 	background: url(../../image/sakai/real.gif) center left no-repeat !important
 	}
-a[href*='.swf']{
+.swf{
 	background: url(../../image/sakai/shockwave.gif) center left no-repeat !important
-	} 
+	}
+	
