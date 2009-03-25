@@ -134,7 +134,7 @@ p#toggle{text-align: right;margin:0 0 1em 0;font-weight:bold}
 
 /*file exensions to match*/
 .doc, .rtf, .docx, .docm, .dotx, .dotm {
-	background: url(/library/image/sakai/doc.gif) center left no-repeat !important
+	background: url(/library/image/sakai/word.gif) center left no-repeat !important
 	}
 .ppt, .pps, .pptx, .pptm, .ppsx, .potx, .potm, .ppam {
 	background: url(/library/image/sakai/ppt.gif) center left no-repeat !important
