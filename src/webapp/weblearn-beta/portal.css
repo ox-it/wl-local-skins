@@ -952,6 +952,10 @@ below they are contextually defined depending on the column as an example,as you
 	background-image: url(/library/image/silk/user.png );
 }
 
+.icon-sakai-signup{
+	background-image: url(/library/image/silk/clock_edit.png );
+}
+
 .icon-sakai-syllabus{
 	background-image: url(/library/image/silk/script.png );
 }
