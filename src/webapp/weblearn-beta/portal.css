@@ -1097,3 +1097,26 @@ div#privacy_overlay {
 	opacity: 0.7;
    z-index: 0;
 }
+
+/* WL-681 Display of related systems links */
+#relatedLinks {
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+#relatedLinks ul {
+	display: inline;
+	margin: 0px;
+}
+
+#relatedLinks ul li {
+	list-style-type: none;
+	margin-left: 1em;
+	display: inline;
+}
+
+#loginLinks {
+	float:right;
+}
