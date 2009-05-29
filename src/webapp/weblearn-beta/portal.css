@@ -180,6 +180,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #mastBanner{
 	vertical-align: top;
 	background:  url("images/squares.jpg") no-repeat 710px 0px;
+	overflow: hidden;
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
