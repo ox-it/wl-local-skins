@@ -551,10 +551,7 @@ also hide if are going to be using icon links (as background of <a> nad <li>
     margin-top : 0px;
     background-position : center right !important;
     background-repeat : no-repeat !important;
-	filter:alpha(opacity=50);
-	opacity: 0.50;
-	-moz-opacity: 0.50;
-	 
+	font-weight: bold;
 }
 
 .toolMenu li span{
@@ -575,9 +572,8 @@ also hide if are going to be using icon links (as background of <a> nad <li>
     margin-top : 0px;
     background-position : center right !important;
     background-repeat : no-repeat !important;
-    
-
 }
+
 .toolMenu li a:hover{
 	text-decoration: none;
 	color: #000;
@@ -595,7 +591,13 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	cursor: text;
 }
 
-
+/*WL-461 WL-469 */
+.subSites .unpublished, .toolMenu li a.hidden {
+	filter:alpha(opacity=50);
+	opacity: 0.50;
+	-moz-opacity: 0.50;
+	zoom: 1; /* Hack for IE to use filter */
+}
 
 /*PART 6 - SITE AFFILIATION,SITE TYPE/STATUS AND PRESENCE - children of #toolMenuWrap	*/
 /*site logo wrapper*/
