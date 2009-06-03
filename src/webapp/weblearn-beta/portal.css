@@ -1068,6 +1068,10 @@ below they are contextually defined depending on the column as an example,as you
 .icon-sakai-subsite{
 	background-image: url(images/subsite.png);
 }
+.icon-sakai-sitebrowser{
+	background-image: url(images/subsite-find.png);
+}
+
 
 /** Privacy Popup Styles **/
 div#privacy_tool_popup {
