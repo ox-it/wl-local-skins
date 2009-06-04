@@ -511,7 +511,6 @@ html>body .dhtml_more_tabs {
 /*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
 /*wrapper for ul that lists the links to tools*/
 .toolMenu {
-	width: 11em;
 	padding: 0;
 	margin: 1em 0 0 0;
 	color: #000;
