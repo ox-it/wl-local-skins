@@ -495,11 +495,12 @@ html>body .dhtml_more_tabs {
 /*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
 /*wrapper for ul that lists the links to tools*/
 .toolMenu {
-	padding: 0;
+	padding:0 3px;
 	margin: 1em 0 0 0;
 	color: #000;
 	background: inherit;
-	border:1px solid #cccccc;
+	border:1px solid #ccc;
+	border-top: 5px solid #ccc;
 }
 
 .toolMenu ul{
@@ -580,6 +581,15 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	opacity: 0.50;
 	-moz-opacity: 0.50;
 	zoom: 1; /* Hack for IE to use filter */
+}
+
+
+/* WL-759 Show the Sub-sites title */
+.toolMenu h1 {
+	font-size: 1em;
+	text-align: center;
+    color: #555;
+	margin: 2px;
 }
 
 /*PART 6 - SITE AFFILIATION,SITE TYPE/STATUS AND PRESENCE - children of #toolMenuWrap	*/
