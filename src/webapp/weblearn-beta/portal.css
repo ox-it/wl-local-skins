@@ -149,10 +149,9 @@ site types are a local setting - adjust */
 /*container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastLogo{
-	position: absolute; /* Remove from affecting mastBanner */
-	left: 0px;
-	top: 0px;
 	width: auto;
+	background: transparent url(images/squares.jpg) no-repeat scroll 710px 0;
+	margin-bottom: 15px;
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
@@ -163,14 +162,16 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
 #mastBanner{
 	vertical-align: top;
-	background:  url("images/squares.jpg") no-repeat 710px 0px;
 	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 270px;/* Ensure we never overlap the mastLogo */
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
 #mastBanner img{
-	margin: 0px 0px 0px 270px; /* Ensure we never overlap the mastLogo */
-	padding: 0px 0px;
+	margin: 0px;
+	padding: 0px;
 }
 
 /*container wrapping,depending on Sakai settings:1) a login form,2) a login link for CAS,3) a logout link*/
@@ -179,6 +180,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	vertical-align: top;
 	clear: both;
 	padding-right: 2%;
+	zoom: 1; /* Hack to get IE to reduce padding/margin */
 }
 
 /*the anchor for the login link for CAS above can be an image - treated here*/
@@ -203,7 +205,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 
 #loginForm is the form for login - contains children #eid #pw #submit*/
 #loginForm{
-	margin: 0.4em 0;
+	margin-bottom: 0.4em;
 }
 
 #eid{
@@ -234,7 +236,8 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 
 /*block for login/logout links */
 #loginLinks{
-	margin: 0.4em 0 0.4em 0;
+	margin-bottom: 0.4em;
+	float:right;
 }
 
 /*main CAS link*/
@@ -243,6 +246,24 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 
 /*secondary CAS link*/
 #loginLink2{
+}
+
+/* WL-681 Display of related systems links */
+#relatedLinks {
+	float: left;
+	margin-bottom: 0.4em;
+}
+
+
+#relatedLinks ul {
+	display: inline;
+	margin: 0px;
+}
+
+#relatedLinks ul li {
+	list-style-type: none;
+	margin-left: 1em;
+	display: inline;
 }
 
 /*PART 4 - SITE NAVIGATION - children of #siteNavBlock*/
@@ -1091,27 +1112,4 @@ div#privacy_overlay {
 	-moz-opacity: 0.7;
 	opacity: 0.7;
    z-index: 0;
-}
-
-/* WL-681 Display of related systems links */
-#relatedLinks {
-	float: left;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-
-#relatedLinks ul {
-	display: inline;
-	margin: 0px;
-}
-
-#relatedLinks ul li {
-	list-style-type: none;
-	margin-left: 1em;
-	display: inline;
-}
-
-#loginLinks {
-	float:right;
 }
