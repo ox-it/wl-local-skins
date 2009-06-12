@@ -334,6 +334,11 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	float:left;
 }
 
+/* Provide space between tabs when outside the hierarchy */
+.siteLinkList li.backHierarchy {
+	margin-right: 30px;
+}
+
 /*links to other sites*/
 .siteLinkList li a, .siteLinkList li a:link, .siteLinkList li a:visited {
 	color: #FFF;
