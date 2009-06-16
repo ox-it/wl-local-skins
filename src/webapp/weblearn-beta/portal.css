@@ -151,7 +151,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #mastLogo{
 	width: auto;
 	background: transparent url(images/squares.jpg) no-repeat scroll 710px 0;
-	margin-bottom: 15px;
+	padding-bottom: 15px; /* Spacing around oxford logo */
 }
 
 /*the portal outputs an image that can be treated here or hidden with display:none*/
