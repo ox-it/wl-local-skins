@@ -903,9 +903,7 @@ height: 75px;*/
 
 .profileTable
 {
-	width:100%;
-
-	
+	width:99%; /* Get rid of horiz scroll */
 }
 .rosterImageCol{
 	width:80px;
