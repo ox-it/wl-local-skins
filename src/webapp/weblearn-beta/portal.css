@@ -1104,8 +1104,7 @@ div#privacy_overlay {
 /* WL-681 Display of related systems links */
 #relatedLinks {
 	float: left;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 0.4em;
 }
 
 
