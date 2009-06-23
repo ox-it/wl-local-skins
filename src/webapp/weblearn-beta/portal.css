@@ -248,24 +248,6 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 #loginLink2{
 }
 
-/* WL-681 Display of related systems links */
-#relatedLinks {
-	float: left;
-	margin-bottom: 0.4em;
-}
-
-
-#relatedLinks ul {
-	display: inline;
-	margin: 0px;
-}
-
-#relatedLinks ul li {
-	list-style-type: none;
-	margin-left: 1em;
-	display: inline;
-}
-
 /*PART 4 - SITE NAVIGATION - children of #siteNavBlock*/
 /*outer wrapper for the site navigation blocks - it is a class,not an id because it can be overloaded with other values having to do with site type
 so for example <div class="tabHolder workspace"> so that different site types can be treated differently via inheritance - children are #siteNavWrap and #navBottom*/
@@ -1117,4 +1099,27 @@ div#privacy_overlay {
 	-moz-opacity: 0.7;
 	opacity: 0.7;
    z-index: 0;
+}
+
+/* WL-681 Display of related systems links */
+#relatedLinks {
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+#relatedLinks ul {
+	display: inline;
+	margin: 0px;
+}
+
+#relatedLinks ul li {
+	list-style-type: none;
+	margin-left: 1em;
+	display: inline;
+}
+
+#loginLinks {
+	float:right;
 }
