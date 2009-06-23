@@ -1,4 +1,4 @@
-/*general body - used by main portal document */ 
+﻿/*general body - used by main portal document */ 
 body{
 	width: 100%;
 	padding: 0;
@@ -180,6 +180,7 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	vertical-align: top;
 	clear: both;
 	padding-right: 2%;
+	margin-top: 0.01em; /* Hack for FF2 scroll lines */
 	zoom: 1; /* Hack to get IE to reduce padding/margin */
 }
 
@@ -1104,6 +1105,7 @@ div#privacy_overlay {
 /* WL-681 Display of related systems links */
 #relatedLinks {
 	float: left;
+	margin-top: 0.01em; /* Hack for FF2 scroll lines */
 	margin-bottom: 0.4em;
 }
 
