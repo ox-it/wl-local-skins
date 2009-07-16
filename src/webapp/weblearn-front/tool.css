@@ -1033,11 +1033,6 @@ width:auto !important
 }
 
 
-.login td.logo{
-	width: 420px;
-	height: 80px;
-	background:#fff url(images/banner_inst.gif) 0 10px no-repeat
-}
 /*temp work for mneme - will incorporate later to the rest 
 tables will be of various types according to their function and meaning - tableFlat, tableAction, tableHierarchical, tableItemSummary 
 right now "namespaced" for mneme only to avoid any possible conflicts*/
