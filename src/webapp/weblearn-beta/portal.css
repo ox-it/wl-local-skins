@@ -234,6 +234,9 @@ that can be used or hidden,can also use a background:url(images/<image name>.<ex
 	float: right;
 	margin-bottom: 0.4em;
 	clear: both;
+	/* Hacks for IE7 */
+	width: 100%; 
+	text-align: right;
 }
 
 /*main CAS link*/
