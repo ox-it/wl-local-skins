@@ -94,6 +94,8 @@ code {
 .helpBody {
 	padding: 0 1em 1em 1em
 	} 
+
+
 /*for web content - 2 states of the body > div that used instead of div.portletBody in web content), with toolbar, without*/
 /*see  a course site web contentn tool  - as instructor and as student - ends with a IE hack needed to make the make the bottom scrolbar (when present) behave.*/
 /*the margin/padding adjustments for both are to avoid https://bugzilla.mozilla.org/show_bug.cgi?id=361768 they essentially tuck the iframe borders "underneath" the outside of the containing block*/
@@ -101,7 +103,6 @@ code {
 	padding: .1em 0;
 	margin: -.2em 0;
 }
-
 .wcwomenu{
 	padding: 0;
 	margin: -.1em 0 -1em 0;
@@ -121,8 +122,8 @@ code {
 /*format the th - since jsf cannot do <th> vertically in a column,
  certain tds are classed (header) in jsf based tools to render the same as the th*/
 .itemSummary th, .itemSummary td.header, .itemSummaryLite td.header{
-	font-weight: normal;
-	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	color: #555;
 	white-space: nowrap;
 	vertical-align: top;
 	text-align: left;
@@ -148,6 +149,7 @@ table.listHier{
 	width: 100%;
 	clear: both;
 	margin-top: .5em;
+	border:none; /*keep ff from giving it a border*/
 }
 
 table.listHier th{
@@ -506,7 +508,7 @@ ie - site creation*/
 .information{
 	background-color: transparent;
 	background-image: url('images/info.gif');
-	background-position: .3em;
+	background-position: 5px 5px;
 	background-repeat: no-repeat;
 	border: 1px solid #888;
 	display: block;
@@ -523,7 +525,7 @@ ie - site creation*/
 .success{
 	background-color: #fff;
 	background-image: url('images/check.gif');
-	background-position: .3em;
+	background-position: 5px 5px;
 	background-repeat: no-repeat;
 	border: 1px solid #4a4;
 	display: block;
@@ -539,7 +541,7 @@ ie - site creation*/
 /*TODO: consolidate - validationEmbedded used in gradebook, validation in many places, alertMessage legacy*/
 /*see: create an announcement but "forget" to give it a title*/
 .validationEmbedded,.validation,.alertMessage{
-	background: #fff url(images/warn.gif) .3em center no-repeat;
+	background: #fff url(images/warn.gif) 5px 5px no-repeat;
 	border: 1px solid #b11;
 	display: block;
 	width: 80%;
@@ -558,7 +560,7 @@ ie - site creation*/
 
 /*when displaying a validaiton failure inline (used with a span)*/
 .alertMessageInline{
-	background: #fff url(images/warn.gif) .3em .3em no-repeat;
+	background: #fff url(images/warn.gif) 5px 5px no-repeat;
 	border: 1px solid #b11;
 	width: 80%;
 	font-size: 1em;
@@ -702,7 +704,14 @@ hr.itemSeparator{
 	padding: .1em .3em;
 	border: 1px solid #888;
 }
+.shorttext input[type="password"]{
+	padding: .1em .3em;
+	border: 1px solid #888;
+}
 
+.shorttext input.disabled{
+	background:#eee
+}
 textarea{
 	margin-top: .5em;
 }
@@ -801,11 +810,10 @@ placeholder till more standard way of doing it*/
 	color: #fff;
 }
 
-.loginform td #eid{
-	width: 10.6em;
-}
-
-.loginform td #pwd{
+.loginform td #eid, .loginform td #pw {
+	padding:.2em;
+	font-family:verdana, arial, helvetica, sans-serif;
+	border: 1px solid #AAAAAA;
 	width: 10.6em;
 }
 
@@ -925,3 +933,14 @@ font-weight: bold;
 	padding: 0.5em;
 }
 
+/*any list (ul) of messages in a synoptic list view*/
+.synopticList{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+/*a list item - children are h3.textPanelHeader, p.textPanelFooter, div.textPanel*/
+.synopticList li{ 
+	padding:0;
+	margin:.5em 0 ;
+} 
