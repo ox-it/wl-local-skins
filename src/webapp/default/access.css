@@ -176,7 +176,7 @@ p#toggle{text-align: right;margin:0 0 1em 0;font-weight:bold}
 	background: url(/library/image/sakai/shockwave.gif) center left no-repeat !important
 	}
 /* Extensions for files that can't be found by extension */
-.org_sakaiproject_content_types_urlResource{
+.org_sakaiproject_content_types_urlResource, .url{
 	background: url(/library/image/sakai/url.gif) center left no-repeat !important
 	}
 .org_sakaiproject_citation_impl_CitationList{
