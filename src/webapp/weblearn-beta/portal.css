@@ -1116,6 +1116,9 @@ background-image: url(../../image/silk/comment.png);
 .icon-sakai-subsite{
 	background-image: url(images/subsite.png);
 }
+.icon-sakai-feeds {
+	background-image: url(/library/image/silk/rss.png);
+}
 
 /** Privacy Popup Styles **/
 div#privacy_tool_popup {
