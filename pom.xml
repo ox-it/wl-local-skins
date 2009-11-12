@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>uk.ac.ox.oucs</groupId>
-    <artifactId>oxford-master</artifactId>
-    <version>1.4</version>
-  </parent>
   <name>Oxford Skins</name>
   <groupId>uk.ac.ox.oucs</groupId>
   <artifactId>local-skins</artifactId>
@@ -16,23 +11,6 @@
   </organization>
   <inceptionYear>2007</inceptionYear>
   <packaging>war</packaging>
-  <repositories>
-    <repository>
-      <id>oucs-vle</id>
-      <name>OUCS VLE Repository</name>
-      <layout>default</layout>
-      <url>http://archiva.oucs.ox.ac.uk/archiva/repository/internal/</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-  <scm>
-    <developerConnection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.5</developerConnection>
-    <connection>scm:svn:https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.5</connection>
-    <url>https://svn.oucs.ox.ac.uk/projects/vle/sakai/local-skins/tags/local-skins-1.5</url>
-  </scm>
-  <dependencies />
   <build>
   </build>
 </project>
