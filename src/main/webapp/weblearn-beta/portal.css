@@ -1122,6 +1122,9 @@ background-image: url(../../image/silk/comment.png);
 .icon-sakai-rsf-evaluation {
 	background-image: url(/library/image/silk/application_form_edit.png);
 }
+.icon-sakai-oauth {
+	background-image: url(/library/image/silk/lock_edit.png);
+}
 
 /** Privacy Popup Styles **/
 div#privacy_tool_popup {
