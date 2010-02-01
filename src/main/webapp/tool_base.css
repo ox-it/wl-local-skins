@@ -810,7 +810,7 @@ placeholder till more standard way of doing it*/
 	color: #fff;
 }
 
-.loginform td #eid, .loginform td #pwd {
+.loginform td #eid, .loginform td #pw {
 	padding:.2em;
 	font-family:verdana, arial, helvetica, sans-serif;
 	border: 1px solid #AAAAAA;
