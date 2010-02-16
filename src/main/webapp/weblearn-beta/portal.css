@@ -301,7 +301,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 	float:right;
 }
 #roleSwitch label, #roleSwitch  a#roleSwitchAnchor{
-	color:#fff;
+	color:#626262;
 	font-weight:bold;
 }
 #roleSwitch a#roleSwitchAnchor{
