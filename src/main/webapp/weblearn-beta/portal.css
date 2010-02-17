@@ -1125,6 +1125,10 @@ background-image: url(../../image/silk/comment.png);
 .icon-sakai-oauth {
 	background-image: url(/library/image/silk/lock_edit.png);
 }
+.icon-sakai-melete
+{
+	background-image: url(/library/image/silk/book_open.png);
+}
 
 /** Privacy Popup Styles **/
 div#privacy_tool_popup {
