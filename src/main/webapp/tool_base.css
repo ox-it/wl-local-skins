@@ -775,25 +775,25 @@ placeholder till more standard way of doing it*/
 }
 
 /*external login form formatting*/
-.login{
+.login, .join{
 	margin: 5em auto;
 	border: 1px solid #555;
 	width: auto;
 }
 
-.login th{
+.login th, .join th{
 	background-color: #eee;
 	padding: .5em;
 	border-bottom: 1px solid #555;
 }
 
-.login td.logo{
+.login td.logo, .join td.logo{
         width: 420px;
         height: 85px;
         background:#fff url(weblearn-front/images/banner_inst.gif) no-repeat center center
 }
 
-.login td.form{
+.login td.form, .login td.form{
 	padding: .5em;
 }
 
@@ -801,11 +801,11 @@ placeholder till more standard way of doing it*/
 	color: #fff;
 }
 
-.loginform label{
+.loginform label, .joinform label{
 	color: #fff;
 }
 
-.loginform td{
+.loginform td {
 	padding: .3em;
 	color: #fff;
 }
