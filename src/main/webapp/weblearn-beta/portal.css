@@ -663,6 +663,15 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	padding: 3px 3px 3px 2em;
 }
 
+/* wrapper for display that site is currently deleted */
+#siteStatusSoftlyDeleted {
+	border: 1px solid #FC3;
+	padding: 24px 5px 5px 5px;
+	background-color: #FFF9E6;
+	background: url('/library/image/silk/error.png') center 5px no-repeat #FFF9E6;
+	text-align: left;
+}
+
 /*wrapper for all elements of presence display */
 #presenceWrapper{
 	width: 9.65em;
