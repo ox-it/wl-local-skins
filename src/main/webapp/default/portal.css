@@ -628,6 +628,15 @@ also hide if are going to be using icon links (as background of <a> nad <li>
 	padding: 3px 3px 3px 2em;
 }
 
+#siteStatusSoftlyDeleted {
+    border: 1px solid #ffcc33;
+    padding: 4px 25px;
+    background-repeat: no-repeat !important;
+    background-position: 5px 5px !important;
+    background-color: #fff9e6;
+    background-image: url('/library/image/silk/error.png');
+}
+
 /*wrapper for all elements of presence display */
 #presenceWrapper{
 	width: 9.65em;

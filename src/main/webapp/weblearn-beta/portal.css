@@ -1191,3 +1191,17 @@ div#privacy_overlay {
 	margin-left: 1em;
 	display: inline;
 }
+
+/* Display indication of two factor session */
+#hasTwoFactor {
+    width: 16px;
+    height: 16px;
+    background-image: url('/library/image/silk/lock.png');
+    display: inline-block;
+    margin: 0px 2px;
+    /* IE7 Hack 
+       http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/
+     */
+    zoom: 1;
+    *display: inline;
+}
