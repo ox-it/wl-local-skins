@@ -11,6 +11,14 @@
   </organization>
   <inceptionYear>2007</inceptionYear>
   <packaging>war</packaging>
+  <dependencies>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.4</version>
+        <scope>provided</scope>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
