@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    httpredirectfilter-sample.xml
+    Sample configuration file for HttpRedirectFilter.
+
+    (c) 2004-2007 Igor Zlatkovic. All rights reserved.
+    The use of this software is subject to licence terms.
+    See http://www.zlatkovic.com/licence.en.html
+-->
+
+<redirect-filter>
+    <!-- Skins that don't exist any more. Clients can cache them for a day -->
+    <redirect match="/weblearn-beta/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+    <redirect match="/weblearn-service/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+    <redirect match="/default/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+    
+    <!-- Some skins just have different images, so everything else can be redirected. -->
+    <ignore match="/weblearn-bms/images/banner_inst.gif"/>
+    <redirect match="/weblearn-bms/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+    
+    <!-- The Front site has a different layout for the header. -->
+    <ignore match="/weblearn-front/images/banner_inst.gif"/>
+    <ignore match="/weblearn-front/images/logo_inst.gif"/>
+    <ignore match="/weblearn-front/portal.css"/>
+    <redirect match="/weblearn-front/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+</redirect-filter>
