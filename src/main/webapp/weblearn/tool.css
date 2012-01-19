@@ -20,22 +20,22 @@ hr.itemSeparator{
 /*SECTION 2 LINKS*/
 a:link{
 	color: #35b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:visited{
 	color: #53b;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:hover,a:active{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 a:focus{
 	color: #33f;
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 /*links inside the calendar tool tables*/
@@ -78,9 +78,14 @@ tr.selectedMove a:link,tr.selectedMove a:visited{
 	_margin-left:-1.5em;
 	white-space: nowrap;
 }	
-.recentItem a:link{
-	text-decoration: none !important;
+.recentItemInstruction{
+	padding:0 5px;
+	background: url(images/new_item_back_inst.png) center left no-repeat;
 }
+.recentItem a:link{
+	border:0px solid #fff;
+	text-decoration:none !important;
+} 
 
 /*links associated with an item in alist*/
 /*see links below announcement title in ann list*/
@@ -718,7 +723,7 @@ textarea:focus{
 /*inline blob used to indicate progress (see: upload a resource say)
 visibility gets toggled*/
 #submitnotif{
-	background: #fff url(../images/warn-a.gif) .3em .3em no-repeat;
+	background: #fff url(images/warn-a.gif) .3em .3em no-repeat;
 	border: 1px solid #b11;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
 	clear: none;
@@ -767,6 +772,24 @@ you loose the native buttonishness affordance of the os/browser */
 	margin-bottom: .5em;
 	width:auto;
 	background: #fff;
+}
+
+/*see: forum/statistics --> display in thread */
+.hierItemBlockBold{
+	padding: 0 .5em .5em .5em;
+	border: 2px solid black;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	width:auto;
+	background: #fff;
+}
+
+/*see: forum/statistics-->display in thread*/
+.hierItemBlockBold h4.textPanelHeaderBold{
+	border-bottom: 2px solid black;	
+	margin: 0 -.4em 1.0em -.4em;
+	padding:.5em;
+	background: #ffd !important;
 }
 
 table.hierItemBlock td{
@@ -958,66 +981,12 @@ width:auto !important
 	text-align:left
 }
 
-
-
-/*SECTION 12 TOOL TITLE SELECTORS and other PORTAL THINGS*/
-.portletTitle{
-	width: 100%;
-}
-
-.portletTitle .title img{
-	margin: 0;
-/*	vertical-align: text-bottom;*/
-	width: 18px;
-	height: 16px;
-}
-
-.portletTitle .title{
-	padding: 2px 4px 6px 4px;
-	height: 1em;
-	font-size: 120%;
-	float: left;
-	color: #000;
-}
-
-.portletTitle .title h2{
-	display: inline;
-	margin: 0 0 0 .2em;
-	padding: 0;
-	color: #555;
-	font-weight: bold;
-	font-size: 1em;
-}
-
-.portletTitle .title a{
-	background: url(images/reload.gif) center left no-repeat;
-}
-
-.portletTitle .title a:hover{
-	background: url(images/reload_h.gif) center left no-repeat;
-}
-
-.portletTitle .action{
-	padding: 2px 4px 6px 2px;
-	text-align: right;
-	vertical-align: middle;
-}
-
-.portletTitle .action img{
-	margin: 0;
-	vertical-align: text-bottom;
-	width: 16px !important;
-}
-
-.portletTitle .action a{
-	background: url(images/help.gif) center right no-repeat;
-}
-
-.portletTitle .action a:hover{
-	background: url(images/help_h.gif) center right no-repeat;
-}
+/*PORTAL THINGS*/
 
 /*below for "presence in chat" functionality*/
+.presenceBody{
+	background:#fff
+}
 .presenceList{
 	font-size: .8em;
 	list-style: none;
@@ -1038,32 +1007,6 @@ width:auto !important
 /*some definitions overriding tool_base.css for the external xlogin screen*/
 .loginform input#submit, .loginform label{
 	color: #000;
-}
-
-/*temp work for mneme - will incorporate later to the rest 
-tables will be of various types according to their function and meaning - tableFlat, tableAction, tableHierarchical, tableItemSummary 
-right now "namespaced" for mneme only to avoid any possible conflicts*/
-.samSection .tableAction td {
-	vertical-align:middle
-}
-.samSection .tableAction td input{
-	margin: 0 5px 1px 1px;
-	vertical-align:top;
-}
-.samSection .tableAction td label{
-	border:1px solid #bbb;
-	padding:0 3px;
-	background: #ddd;
-}
-.samSection{
-	margin-left: 4em;
-	margin-right: 4em;
-	margin-top:2em;
-	margin-bottom:2em;
-}
-.samSectionHeader{
-	margin-left: -2em;
-	margin-right: -2em;
 }
 
 /* Make a list based css menu */
@@ -1112,7 +1055,7 @@ ul.makeMenu ul.CSStoShow {
 }
 ul.makeMenu li:hover > ul {
 	display: block;
-  	width: 14em;
+  	width: auto;
 	background-color:#ffffff;
 	background-image:none;
 	position:absolute;
@@ -1129,3 +1072,35 @@ a.searchPage {
  margin:0 2px;
  padding:0 2px; 
 }
+
+
+#davdocs_step1{
+        border: 3px solid #eee;
+        padding: 1em;
+        background-color: #FFFCE9;
+
+}
+
+#davdocs_step2{
+        margin-top: 1.2em;
+        border: 3px solid #eee;
+        padding: 1em;
+        background-color: #EBFFE8;
+
+}
+
+#davdocs_step2 ul{
+               list-style-type: none;
+}
+
+#davdocs_step2 ul li{
+               display: inline;
+               margin-right: 1.5em;
+}
+
+.webdav_os{
+                margin-top: 4em;
+                border: 3px solid #eee;
+                padding: 2em;
+}
+
