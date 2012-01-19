@@ -9,6 +9,8 @@
 
 package com.zlatkovic.servlet;
 
+import java.util.regex.Pattern;
+
 /**
  * A redirect rule base class, the parent of all redirect actions. It was
  * an inner class of RedirectFilter before, now it is outsourced in order
@@ -20,7 +22,7 @@ package com.zlatkovic.servlet;
  * @version 2.0
  */
 public class RedirectRule {
-	public String match;
+	public Pattern match;
 	public String target;
 	public String localAddress;
 	public String remoteRange;

@@ -88,6 +88,16 @@ public class RedirectFilter implements Filter {
 		public boolean permanent = false;
 		public boolean encodeUrl = false;
 		public boolean entireUrl = false;
+		public String cache;
+
+	}
+	
+	/*
+	 * Defines a action which is to stop processing the current request.
+	 * This is in the wrong place in the class hierarchy as it doesn't have a target.
+	 */
+	protected class IgnoreAction extends RedirectRule {
+		
 	}
 
 	/*
@@ -160,7 +170,7 @@ public class RedirectFilter implements Filter {
 				}
 			}
 
-			Matcher matcher = Pattern.compile(rule.match).matcher(matchMe);
+			Matcher matcher = rule.match.matcher(matchMe);
 			
 			boolean matches = false;
 			if (matcher.matches()) {
@@ -174,6 +184,11 @@ public class RedirectFilter implements Filter {
 
 			if (matches == true) {
 				String target = rule.target;
+				
+				if (rule instanceof IgnoreAction) {
+					// Stop looking at rules.
+					break;
+				}
 
 				if (matcher.groupCount() > 0) {
 					for (int j = 1; j <= matcher.groupCount(); j++)
@@ -182,12 +197,12 @@ public class RedirectFilter implements Filter {
 				}
 				
 				if (contextAware == true && target.indexOf("://") == -1 &&
-						(rule instanceof ForwardAction)) {
+						!(rule instanceof ForwardAction)) {
 					if (target.startsWith("/") == false && ctxPath.equals("/") == false)
 						target = "/" + target;
 					target = ctxPath + target;
 				}
-				
+
 				if (processRule(httpRequest, httpResponse, rule, target) == true) {
 					return;
 				} else {
@@ -283,15 +298,17 @@ public class RedirectFilter implements Filter {
 	protected RedirectRule loadRule(Element elem) {
 		
 		// Ignore if required attributes are missing
-		if (!elem.hasAttribute("match") || !elem.hasAttribute("target"))
+		if (!elem.hasAttribute("match"))
 			return null;
 		
 		String action = elem.getTagName();
 		
 		if (action.equals("forward")) {
 			ForwardAction rule = new ForwardAction();
-			
-			rule.match = elem.getAttribute("match");
+			if (!elem.hasAttribute("target")) {
+				return null;
+			}
+			rule.match = Pattern.compile(elem.getAttribute("match"));
 			rule.target = elem.getAttribute("target");
 			
 			rule.localAddress = elem.hasAttribute("local-address")? 
@@ -304,8 +321,10 @@ public class RedirectFilter implements Filter {
 				
 		if (action.equals("redirect")) {
 			RedirectAction rule = new RedirectAction();
-			
-			rule.match = elem.getAttribute("match");
+			if (!elem.hasAttribute("target")) {
+				return null;
+			}
+			rule.match = Pattern.compile(elem.getAttribute("match"));
 			rule.target = elem.getAttribute("target");
 			
 			rule.localAddress = elem.hasAttribute("local-address")? 
@@ -319,10 +338,23 @@ public class RedirectFilter implements Filter {
 					elem.getAttribute("encode-url").equals("yes") : false;
 			rule.entireUrl = elem.hasAttribute("entire-url")?
 					elem.getAttribute("entire-url").equals("yes") : false;
+			rule.cache = elem.hasAttribute("cache")?
+					elem.getAttribute("cache") : null;
 
 			return rule;
 		}
 		
+		if (action.equals("ignore")) {
+			IgnoreAction rule = new IgnoreAction();
+			
+			rule.match = Pattern.compile(elem.getAttribute("match"));
+			
+			rule.localAddress = elem.hasAttribute("local-address")? 
+					elem.getAttribute("local-address") : null;
+			rule.remoteRange = elem.hasAttribute("remote-address")?
+					elem.getAttribute("remote-address") : null;
+			return rule;
+		}
 		return null;
 	}
 
@@ -382,7 +414,11 @@ public class RedirectFilter implements Filter {
 		String finalURL = getFinalURL(request, response, rule, targetURL);
 		
 		if (rule instanceof RedirectAction) {
-			if (((RedirectAction)rule).permanent == true) {
+			RedirectAction redirectRule = (RedirectAction)rule;
+			if (redirectRule.cache != null) {
+				response.addHeader("Cache-Control", redirectRule.cache);
+			}
+			if (redirectRule.permanent == true) {
 				response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
 				response.addHeader("Location", finalURL);
 			
@@ -403,11 +439,11 @@ public class RedirectFilter implements Filter {
 			
 			if (logRedirects == true) {
 				filterConfig.getServletContext().log(filterName + ": " +
-						"Forwarded '" + getRequestURI(request) + "' to '" + finalURL + "'");
+						"Forwarded '" + getRequestURI(request) + "' to '" + targetURL + "'");
 			}
 			
 			return true;
-		} 
+		}
 		
 		return false;
 	}
