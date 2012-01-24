@@ -271,7 +271,22 @@ ul.attachList li{
 .listNav div.instruction, .searchNav div.instruction{
 	text-align: center;
 	font-size: .9em;
+    font-family: verdana, arial, helvetica, sans-serif\0/;
 }
+/*listNav inputs have punct. marks as labels, adding a screen reader only fieldset with the real label makes them usable */
+div.listNav fieldset { 
+     display:inline; 
+     margin:0; 
+     padding:0; 
+   } 
+div.listNav legend { 
+     display:inline; 
+     margin:0; 
+     padding:0; 
+     position: absolute !important; 
+     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ 
+     clip: rect(1px, 1px, 1px, 1px); 
+} 
 
 /*searchNav panel has a special text input*/
 .searchNav input.searchField{
@@ -517,7 +532,7 @@ ie - site creation*/
 	color: #888;
 	font-size: 1em;
 	margin: 5px 0px;
-	padding: 5px 5px 5px 25px;
+	padding: 5px 5px 5px 25px !important;
 }
 
 /*indicate success*/
@@ -534,7 +549,7 @@ ie - site creation*/
 	color: #000;
 	font-size: 1em;
 	margin: 5px 0px;
-	padding: 5px 5px 5px 25px;
+	padding: 5px 5px 5px 25px !important;
 }
 
 /*indicate failed validation, non-system errors*/
@@ -549,7 +564,7 @@ ie - site creation*/
 	clear: both;
 	color: #b11;
 	margin: 5px 0;
-	padding: 5px 5px 5px 25px;
+	padding: 5px 5px 5px 25px !important;
 }
 
 /*yet another way to indicate a field that failed validation - treats just the label color via inheritance*/
@@ -578,7 +593,7 @@ ie - site creation*/
 /*highlight certain texts*/
 /*see: create a draft announcement - see the list*/
 .highlight{
-	color: #b11;
+	color: #b01111;
 }
 
 /*see: top of resources*/
@@ -597,7 +612,7 @@ h3 .breadCrumb{
 new message types - see http://bugs.sakaiproject.org/jira/browse/SAK-14197 
 and for usage http://www.umich.edu/~gsilver/messages/
 */
-.messageError,.messageValidation,.messageConfirmation,.messageSuccess,.messageInformation,.messageInstruction,.messageProgress{/*common to all messages types*/ margin:.5em 0;padding:3px 3px 3px 2em;background-position:3px 3px;background-repeat:no-repeat;height:100%;overflow:hidden;clear:both}
+.messageError,.messageValidation,.messageConfirmation,.messageSuccess,.messageInformation,.messageInstruction,.messageProgress{/*common to all messages types*/ margin:.5em 0;padding:3px 3px 3px 2em !important;background-position:3px 3px;background-repeat:no-repeat;height:100%;overflow:hidden;clear:both}
 .messageError{background-image:url(images/exclamation.png);background-color:#fbb;border:1px solid #c00}
 .messageValidation{background-image:url(images/error.png);background-color:#fee;border:1px solid #f55}
 .messageConfirmation{background-image:url(images/asterisk_orange.png);background-color:#ffe;border:1px solid #b71}
@@ -775,25 +790,24 @@ placeholder till more standard way of doing it*/
 }
 
 /*external login form formatting*/
-.login, .join{
+.login{
 	margin: 5em auto;
 	border: 1px solid #555;
 	width: auto;
 }
 
-.login th, .join th{
+.login th{
 	background-color: #eee;
 	padding: .5em;
 	border-bottom: 1px solid #555;
 }
 
-.login td.logo, .join td.logo{
-        width: 420px;
-        height: 85px;
-        background:#fff url(weblearn-front/images/banner_inst.gif) no-repeat center center
+.login td.logo{
+	width: 13em;
+	background:#fff url(../image/sakai.jpg) top left no-repeat
 }
 
-.login td.form, .login td.form{
+.login td.form{
 	padding: .5em;
 }
 
@@ -801,11 +815,11 @@ placeholder till more standard way of doing it*/
 	color: #fff;
 }
 
-.loginform label, .joinform label{
+.loginform label{
 	color: #fff;
 }
 
-.loginform td {
+.loginform td{
 	padding: .3em;
 	color: #fff;
 }
@@ -814,12 +828,15 @@ placeholder till more standard way of doing it*/
 	padding:.2em;
 	font-family:verdana, arial, helvetica, sans-serif;
 	border: 1px solid #AAAAAA;
-	width: 10.6em;
 }
 
 .loginform td #submit{
 	color:#09C;
 	float: right;
+}
+
+.loginform td .loginsubmit {
+        color:#09C;
 }
 
 /*
@@ -912,6 +929,10 @@ table.checkbox label input {
 .sidebyside select{
 	width: 18em;
 }
+.sidebyside select.notsbs{
+	width: auto;
+}
+
 
 /*messagecenter stuff*/
 .msgAdvSearch {
@@ -932,6 +953,14 @@ font-weight: bold;
 	border: 1px solid #000000;
 	padding: 0.5em;
 }
+/*span surrounding folder icons - used to decorate them (new in dropbox, locked, etc.)
+a fake border makes the icon and the title align for IE8*/
+span.nil{
+	border:0px solid transparent
+}
+span.nil a{
+	border:0px solid transparent
+}
 
 /*any list (ul) of messages in a synoptic list view*/
 .synopticList{
@@ -944,3 +973,80 @@ font-weight: bold;
 	padding:0;
 	margin:.5em 0 ;
 } 
+
+/*styles for reorderer (content, assignments, announcements)*/
+#reorder-list-sortingToolBar{
+	font-size:.9em;
+	border:1px solid #ccc;
+	background:#ffe;
+	margin:1em 0;
+	padding:5px;
+	width:90%
+}
+#reorder-list-sortingToolBar a{
+	outline:none;
+}
+#reorder-list {
+	font-size:.9em;	
+	margin:0;
+	padding:0;
+	width:90%
+}
+#reorder-list li {
+	list-style:none;
+	padding:5px;
+	margin:5px 0;
+	background:#eee;
+	border:1px solid #ddd;
+	width: 100%;
+}
+#reorder-list li span.grabHandle{
+	display:block;
+	float:left;
+	width:5em;
+	padding-right:0;
+}
+#reorder-list li span.grabHandle input{
+	margin-top:-2px;
+}
+
+#reorder-list li .title{
+	display:block;
+	float:left;
+	width:45%;
+	}
+#reorder-list li span{
+	padding-right:2em;
+}
+
+.fl-reorderer-movable-selected{
+	border: none; outline: none
+}
+/*marks a drop zone*/
+.fl-reorderer-dropMarker {
+	/*width: 50%;*/
+	height: 30px; /*ok*/
+	background:#fff !important;
+	border:1px dashed #ccc !important
+}
+.fl-reorderer-movable-hover {
+	/*hover over a selectable item*/ 
+	cursor: move 
+}
+.fl-reorderer-movable-dragging {
+	/* item left behind */
+	background: #fff;
+	color: #555 !important;
+	border:1px dashed #ccc !important;
+	outline:none;
+}
+.fl-reorderer-avatar {
+	/*item being dragged*/ 
+	opacity: 0.55;
+	list-style:none;
+	background: #bea !important;
+	width: 50% !important
+}
+.fl-reorderer-avatar * {display: none }
+.fl-reorderer-avatar .title {display:block;margin:5px;font-weight: bold;font-size:1.2em }
+.recentMove { background: #def !important;border:1px solid #7bf !important}
