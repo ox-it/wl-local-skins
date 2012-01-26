@@ -1144,7 +1144,7 @@ below they are contextually defined depending on the column as an example,as you
 }
 
 .icon-sakai-sitestats-admin {
-	background-image: url(../../image/silk/chart_line.png);
+	background-image: url(/library/image/silk/chart_line.png);
 }
 
 .icon-sakai-presentation {
@@ -1196,15 +1196,15 @@ below they are contextually defined depending on the column as an example,as you
 }
 
 .icon-sakai-synoptic-messagecenter{
-background-image: url(../../image/silk/comment.png);
+background-image: url(/library/image/silk/comment.png);
 }
 
 .icon-sakai-conferencing {
-    background-image : url(../../image/silk/webcam.png);
+    background-image : url(/library/image/silk/webcam.png);
 }
 
 .icon-sakai-profile2 { 
-	background-image: url(../../image/silk/vcard.png); 
+	background-image: url(/library/image/silk/vcard.png); 
 } 
 
 /*admin tools*/

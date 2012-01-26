@@ -556,7 +556,7 @@ ie - site creation*/
 /*TODO: consolidate - validationEmbedded used in gradebook, validation in many places, alertMessage legacy*/
 /*see: create an announcement but "forget" to give it a title*/
 .validationEmbedded,.validation,.alertMessage{
-	background: #fff url(images/warn.gif) 5px 5px no-repeat;
+	background: #fff url(/library/image/sakai/warn.gif) 5px 5px no-repeat;
 	border: 1px solid #b11;
 	display: block;
 	width: 80%;
@@ -575,7 +575,7 @@ ie - site creation*/
 
 /*when displaying a validaiton failure inline (used with a span)*/
 .alertMessageInline{
-	background: #fff url(images/warn.gif) 5px 5px no-repeat;
+	background: #fff url(/library/image/sakai/warn.gif) 5px 5px no-repeat;
 	border: 1px solid #b11;
 	width: 80%;
 	font-size: 1em;
