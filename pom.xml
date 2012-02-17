@@ -18,6 +18,20 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>maven-repo.oucs</id>
+            <url>http://maven-repo.oucs.ox.ac.uk/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-repo.oucs</id>
+            <url>http://maven-repo.oucs.ox.ac.uk/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <scm>
+        <connection>scm:git:git://git-repo.oucs.ox.ac.uk/git/repos/local-project/local-skins</connection>
+        <developerConnection>scm:git:ssh://git-repo.oucs.ox.ac.uk/~git/repos/local-project/local-skins</developerConnection>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
