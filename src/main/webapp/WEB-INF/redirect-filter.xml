@@ -10,17 +10,23 @@
 
 <redirect-filter>
     <!-- Skins that don't exist any more. Clients can cache them for a day -->
-    <redirect match="/weblearn-beta/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
-    <redirect match="/weblearn-service/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
-    <redirect match="/default/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+    <redirect match="/weblearn-beta/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
+    <redirect match="/weblearn-service/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
+    <redirect match="/default/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
     
     <!-- Some skins just have different images, so everything else can be redirected. -->
     <ignore match="/weblearn-bms/images/banner_inst.gif"/>
-    <redirect match="/weblearn-bms/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+    <redirect match="/weblearn-bms/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
     
     <!-- The Front site has a different layout for the header. -->
     <ignore match="/weblearn-front/images/banner_inst.gif"/>
     <ignore match="/weblearn-front/images/logo_inst.gif"/>
     <ignore match="/weblearn-front/portal.css"/>
-    <redirect match="/weblearn-front/(.*)$" target="/weblearn/$1" permanent="no" cache="86400" />
+    <redirect match="/weblearn-front/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
+    
+    <!--
+        This is a redirect which allows the skin to come out of a site within WebLearn itself.
+        The skin property isn't allowed to contain a / so we have the dynamic- prefix instead. 
+      -->
+    <redirect match="/dynamic-([^/]*)/(.*)$" target="/access/content/group/$1/skin/$2" permanent="no" cache="86400"/> 
 </redirect-filter>

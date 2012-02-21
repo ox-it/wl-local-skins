@@ -198,9 +198,13 @@ public class RedirectFilter implements Filter {
 				
 				if (contextAware == true && target.indexOf("://") == -1 &&
 						!(rule instanceof ForwardAction)) {
-					if (target.startsWith("/") == false && ctxPath.equals("/") == false)
-						target = "/" + target;
-					target = ctxPath + target;
+					if (target.startsWith("/") == false) {
+						// target = relativepath
+						if (ctxPath.equals("/") == false) {
+							target = "/" + target;
+						}
+						target = ctxPath + target;
+					}
 				}
 
 				if (processRule(httpRequest, httpResponse, rule, target) == true) {
