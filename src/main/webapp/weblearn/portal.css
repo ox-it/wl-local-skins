@@ -937,8 +937,8 @@ below they are contextually defined depending on the column as an example,as you
 
 
 /*iframes for portlet title and portlet content*/
-.portletTitleIframe{
 /*gone for 2.3
+.portletTitleIframe{
 	margin: 0;
 	height: 1.8em;
 	width: 100%;
