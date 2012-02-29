@@ -912,9 +912,33 @@ below they are contextually defined depending on the column as an example,as you
         background: url(images/page_edit.gif) center right no-repeat;
 }       
 
+
+/* Styles for short links in portal */
+.portletTitle .action a.tool-directurl{
+   padding:2px;
+   background: url(/library/image/silk/link.png) center right no-repeat;
+}
+        
+.portletTitle .action a.tool-directurl:hover{
+   background: url(/library/image/silk/link.png) center right no-repeat;
+}
+
+.direct-url-wrap {
+   font-size: 85%;
+   color: #555;
+}
+
+.direct-url-wrap textarea {
+   color: #000;
+   overflow:auto;
+   width:250px;
+   display:block;
+}
+
+
 /*iframes for portlet title and portlet content*/
-/*gone for 2.3
 .portletTitleIframe{
+/*gone for 2.3
 	margin: 0;
 	height: 1.8em;
 	width: 100%;
