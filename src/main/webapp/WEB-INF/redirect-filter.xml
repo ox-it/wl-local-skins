@@ -23,6 +23,14 @@
     <ignore match="/weblearn-front/images/logo_inst.gif"/>
     <ignore match="/weblearn-front/portal.css"/>
     <redirect match="/weblearn-front/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
+
+    <!-- The Front site has a different layout for the header. -->
+    <ignore match="/bsg/images/Weblearn-banner28.png"/>
+    <ignore match="/bsg/portal.css"/>
+    <ignore match="/bsg/bsg-header-style.css"/>
+    <ignore match="/bsg/tool.css"/>
+    <ignore match="/bsg/tool-old-combined.css"/>
+    <redirect match="/bsg/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
     
     <!--
         This is a redirect which allows the skin to come out of a site within WebLearn itself.
