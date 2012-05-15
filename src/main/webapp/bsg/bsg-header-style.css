@@ -15,7 +15,7 @@
 
 #mastHead {
     background-color: #1d5da4;
-	background: url('http://cod.oucs.ox.ac.uk:50080/access/content/group/bsg-skin/skin/images/Weblearn-banner28.png') no-repeat;
+    background: url('./images/Weblearn-banner28.png') no-repeat;
     height: 80px;
     width: 100%;
     margin: 0;
