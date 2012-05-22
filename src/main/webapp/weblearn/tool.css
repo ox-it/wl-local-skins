@@ -1125,7 +1125,7 @@ div .toggleAnchor:hover {
     border-color: #999 !important;
 }
 
-# This is for account validator to put the logo in the correct place.
+/* This is for account validator to put the logo in the correct place. */
 div.header {
     background-position: 20px 20px;
 }
