@@ -1104,7 +1104,28 @@ a.searchPage {
                 padding: 2em;
 }
 
+/*
+ * site-manage.css
+ * styles the groups box, and rather than changing that file we override the style
+ * assignment.css
+ * styles the assignment details box when viewing the submission.
+ * !important is needed to override other tool.css 
+ */
+
+div .toggleAnchor, div .toggleAnchorOpen {
+	background-color: #ddd !important;
+	border-color: #ddd !important;
+}
+
+div .toggledContent {
+	border-color: #ddd !important;
+}
+
+div .toggleAnchor:hover {
+    border-color: #999 !important;
+}
+
 # This is for account validator to put the logo in the correct place.
-div.wrapper {
+div.header {
     background-position: 20px 20px;
 }
