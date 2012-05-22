@@ -1104,3 +1104,7 @@ a.searchPage {
                 padding: 2em;
 }
 
+# This is for account validator to put the logo in the correct place.
+div.wrapper {
+    background-position: 20px 20px;
+}
