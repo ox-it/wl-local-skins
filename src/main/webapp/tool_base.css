@@ -1050,3 +1050,5 @@ span.nil a{
 .fl-reorderer-avatar * {display: none }
 .fl-reorderer-avatar .title {display:block;margin:5px;font-weight: bold;font-size:1.2em }
 .recentMove { background: #def !important;border:1px solid #7bf !important}
+
+span.indent { letter-spacing:1em }
