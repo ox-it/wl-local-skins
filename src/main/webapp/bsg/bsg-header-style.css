@@ -47,12 +47,7 @@
     text-decoration: underline;
 }
 
-div.siteNavWrap.project {
-    height: 0px;
-    margin-bottom: 20px;
-}
-
-div.siteNavWrap.workspace {
+div.siteNavWrap{
     height: 0px;
     margin-bottom: 20px;
 }
