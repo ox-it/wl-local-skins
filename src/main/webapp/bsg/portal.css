@@ -902,13 +902,25 @@ below they are contextually defined depending on the column as an example,as you
 .portletTitle .action a:hover{
 	background: url(images/help_h.gif) center right no-repeat;
 }
-
-.portletTitle .action a.tool-directurl {
-	background: url(images/link.png) center right no-repeat;
+.portletTitle .action a.tool-directurl{
+   padding:2px;
+   background: url(/library/image/silk/link.png) center right no-repeat;
+}
+        
+.portletTitle .action a.tool-directurl:hover{
+   background: url(/library/image/silk/link.png) center right no-repeat;
 }
 
-.portletTitle .action a.tool-directurl:hover {
-	background: url(images/link.png) center right no-repeat;
+.direct-url-wrap {
+   font-size: 85%;
+   color: #555;
+}
+
+.direct-url-wrap textarea {
+   color: #000;
+   overflow:auto;
+   width:250px;
+   display:block;
 }
 
 .portletTitle .action a#jsr-edit{
