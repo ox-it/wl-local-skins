@@ -60,6 +60,10 @@ div#roleSwitch a {
     color: #555;
 }
 
+#roleSwitch a#roleSwitchAnchor {
+    margin: 0 0.2em 0 0;
+}
+
 .siteLinkList li {
 	border: 0px;
 }
