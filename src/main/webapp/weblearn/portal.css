@@ -1227,9 +1227,12 @@ background-image: url(/library/image/silk/comment.png);
     background-image : url(/library/image/silk/webcam.png);
 }
 
-.icon-sakai-profile2 { 
-	background-image: url(/library/image/silk/vcard.png); 
-} 
+.icon-sakai-profile2 {
+	background-image: url(/library/image/silk/vcard.png);
+}
+.icon-sakai-oauth {
+    background-image: url(/library/image/silk/lock_edit.png);
+}
 
 /*admin tools*/
 .icon-sakai-users{
@@ -1292,8 +1295,8 @@ background-image: url(/library/image/silk/comment.png);
 .icon-sakai-rsf-evaluation {
 	background-image: url(/library/image/silk/application_form_edit.png);
 }
-.icon-sakai-oauth {
-	background-image: url(/library/image/silk/lock_edit.png);
+.icon-sakai-oauth-admin {
+    background-image: url(/library/image/silk/lock_edit.png);
 }
 .icon-course-signup {
 	background-image: url(/library/image/silk/table_edit.png);
