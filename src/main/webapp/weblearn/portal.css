@@ -1144,7 +1144,11 @@ below they are contextually defined depending on the column as an example,as you
 }
 
 .icon-sakai-assignment-grades{
-	background-image: url(/library/image/silk/page_edit.png );
+    background-image: url(/library/image/silk/page_edit.png );
+}
+
+.icon-sakai-assignment2{
+    background-image: url(/library/image/silk/page_edit.png );
 }
 
 .icon-sakai-forums{
