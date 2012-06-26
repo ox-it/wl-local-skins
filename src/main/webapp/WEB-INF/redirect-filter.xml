@@ -31,6 +31,14 @@
     <ignore match="/bsg/tool.css"/>
     <ignore match="/bsg/tool-old-combined.css"/>
     <redirect match="/bsg/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
+
+    <!-- The SBS site built on the bsg site -->
+    <ignore match="/sbs/bsg-header-style.css"/>
+    <ignore match="/sbs/images/weblearn_banner_SBS2a.png"/>
+    <ignore match="/sbs/tool.css"/>
+    <redirect match="/sbs/portal.css" target="bsg/portal.css"/>
+    <redirect match="/sbs/tool-old-combined.css" target="bsg/tool-old-combined.css"/>
+    <redirect match="/sbs/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
     
     <!--
         This is a redirect which allows the skin to come out of a site within WebLearn itself.
