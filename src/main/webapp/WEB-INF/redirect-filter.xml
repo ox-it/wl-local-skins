@@ -33,11 +33,14 @@
     <redirect match="/bsg/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
 
     <!-- The SBS site built on the bsg site -->
-    <ignore match="/sbs/bsg-header-style.css"/>
+
+	<ignore match="/sbs/sbs-header-style.css"/>
     <ignore match="/sbs/images/weblearn_banner_SBS2a.png"/>
     <ignore match="/sbs/tool.css"/>
-    <redirect match="/sbs/portal.css" target="bsg/portal.css"/>
-    <redirect match="/sbs/tool-old-combined.css" target="bsg/tool-old-combined.css"/>
+
+    <ignore match="/sbs/tool-old-combined.css"/>
+
+    <ignore match="/sbs/portal.css"/>
     <redirect match="/sbs/(.*)$" target="weblearn/$1" permanent="no" cache="86400" />
     
     <!--
