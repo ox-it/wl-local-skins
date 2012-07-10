@@ -1309,6 +1309,20 @@ background-image: url(/library/image/silk/comment.png);
 	background-image: url(/library/image/silk/book_open.png);
 }
 
+/** Icons for OXAM **/
+.icon-sakai-oxam-admin {
+    background-image: url(/library/image/silk/page_white_edit.png)
+}
+.icon-sakai-oxam-browse {
+    background-image: url(/library/image/silk/page_white_text.png)
+}
+.icon-sakai-oxam-search-simple {
+    background-image: url(/library/image/silk/page_white_magnify.png)
+}
+.icon-sakai-oxam-search-adv {
+    background-image: url(/library/image/silk/page_white_find.png)
+}
+
 /** Privacy Popup Styles **/
 div#privacy_tool_popup {
     position: absolute;
