@@ -1301,7 +1301,7 @@ ul.makeMenuChild li a:hover {
 }
 
 .siteLinkList li a:visited {
-	background: none
+	background: transparent
 }
 
 .siteNavWrap li.selectedTab a:visited,.siteNavWrap li.selectedTab a:link
