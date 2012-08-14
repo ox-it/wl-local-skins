@@ -366,7 +366,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 /*links to other sites*/
 .siteLinkList li a, .siteLinkList li a:link, .siteLinkList li a:visited {
-	color: #FFF;
+	color: #000;
 	text-decoration: none;
 	display: block;
 	float: left;
@@ -402,7 +402,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 .siteLinkList li.selectedTab a span{
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
-	padding: 8px 11px 5px 0;
+	/* padding: 8px 11px 5px 0; */
 }
 
 .siteLinkList li.tab-dim a,
@@ -443,7 +443,7 @@ so for example <div class="tabHolder workspace"> so that different site types ca
 
 .siteLinkList li.more-active a span {
 	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top;
-	padding-bottom: 5px;
+	padding-bottom: 15px;
 }
 
 .siteLinkList li.more-active a span.inner {
@@ -1380,7 +1380,7 @@ div#privacy_overlay {
 	-webkit-border-radius:0 0 10px 10px;
 }
 #mobile-portal-link a,#mobile-portal-link a:visited{
-	color:#fff;
+	color:#000;
 	font: normal 120% Verdana, Geneva, Arial, Helvetica, sans-serif;
 	text-decoration:none;
 }

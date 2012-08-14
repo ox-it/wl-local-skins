@@ -14,7 +14,7 @@ hr.itemSeparator {
 }
 
 a:visited {
-	color: #53b;
+	color: #000;
 	text-decoration: underline
 }
 
@@ -1273,7 +1273,7 @@ ul.makeMenuChild li a:hover {
 
 .siteLinkList li a:link,.siteLinkList li a:visited {
 	background: none;
-	/* AMIR: in the next line I have changed the colour from #002E59 to #FFFFFF */
+	/* AMIR: in the next line I have changed the background colour from #002E59 to #FFFFFF */
 	background: #FFFFFF;
 	border-bottom: none;
 	color: #333;
@@ -1309,14 +1309,15 @@ ul.makeMenuChild li a:hover {
 .siteNavWrap li.selectedTab a:visited,.siteNavWrap li.selectedTab a:link
 	{
 	/* AMIR: in the next line I have changed the colour from #002E59 to #FFFFFF */
-	background: #FFFFFF;
+	background: url(images/chevron-right.png) no-repeat scroll left top transparent;
+	padding-left: 10px;
 
 }
 
 .siteNavWrap li.selectedTab a span {
 	font-weight: bold;
 	background: none;
-	padding: 0
+	/* padding: 0   4.30pm 14-08-12 */
 }
 
 input[type="submit"],input[type="button"],input[type="reset"] {
@@ -1368,6 +1369,14 @@ form input[type="text"]:hover {
 
 span.indent {
 	letter-spacing: 1.8em
+}
+
+.portletBody a:visited {
+	color: #1d5da4
+}
+
+.portletBody a:hover {
+	color: #000
 }
 
 .portletBody table {
@@ -1642,21 +1651,22 @@ a:link,.navIntraTool a:visited {
 
 /* AMIR: Some links were turning white on when mouse hovered over, changed colour to black */
 
-a:hover,a:active,a:focus,.specialLink a:hover,.navIntraTool a:hover,.breadCrumb a:hover
+a:hover,a:active,a:visited,a:focus,.specialLink a:hover,.navIntraTool a:hover,.breadCrumb a:hover
 	{
 	color: #000;
 	text-decoration: underline
 }
 
-table.calendar td a:hover,.toolMenu li a:hover,p.paragraph a:hover,ul.star li a:hover,.rwikiRenderedContent ol li a:hover,.dhtml_more_tabs a:hover span,.searchResultsContainer a:hover,.tabHeadOn a:hover,.tabHeadOff a:hover
+table.calendar td a:hover,a:visited,.toolMenu li a:hover,p.paragraph a:hover,ul.star li a:hover,.rwikiRenderedContent ol li a:hover,.dhtml_more_tabs a:hover span,.searchResultsContainer a:hover,.tabHeadOn a:hover,.tabHeadOff a:hover
 	{
 	text-decoration: underline
 }
 
-/* AMIR: I noticed the Assignment Tool was showing white-coloured hyperlinks in the permissions table, therefore removing "color: #fff;" on line 1653 */
+/* AMIR: I noticed the Assignment Tool was showing white-coloured hyperlinks in the permissions table, therefore removing "color: #fff;" on line 1653 -- replaced with #35B */
 .specialLink a:link,.specialLink a:visited,.breadCrumb a:link,.breadCrumb a:visited
 	{
 	/* color: #fff; */
+	color: #35B;
 	text-decoration: none
 }
 
@@ -1753,7 +1763,8 @@ ul.star li,.rwikiRenderedContent ol li {
 
 .siteLinkList li.more-active a,.siteLinkList li.more-active a:link,.siteLinkList li.more-active a:visited,.siteLinkList li.selectedTab a,.siteLinkList li.selectedTab a:link,.siteLinkList li.selectedTab a:visited,.siteLinkList li.selectedTab a:hover
 	{
-	font-weight: normal
+	font-weight: normal;
+	color: #000
 }
 
 .searchBottonLink,.searchItemBody {
