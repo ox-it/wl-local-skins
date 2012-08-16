@@ -36,6 +36,7 @@
 
 	<ignore match="/sbs/sbs-header-style.css"/>
     <ignore match="/sbs/images/weblearn_banner_SBS2a.png"/>
+    <ignore match="/sbs/images/chevron-right.png"/>
     <ignore match="/sbs/tool.css"/>
 
     <ignore match="/sbs/tool-old-combined.css"/>
