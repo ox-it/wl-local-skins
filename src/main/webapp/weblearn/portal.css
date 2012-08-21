@@ -980,6 +980,10 @@ below they are contextually defined depending on the column as an example,as you
 	padding-bottom: 1em;
 }
 
+#footerInfo a{
+    text-decoration: none;
+}
+
 #footerInfo img{
 	margin-top: .5em;
 	margin-bottom: .5em;
