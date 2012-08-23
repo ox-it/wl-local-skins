@@ -774,7 +774,25 @@ table.hierItemBlock td h4,table.hierItemBlock td h5,table.hierItemBlock td h6,.h
 	color: #000
 }
 
-ul.makeMenu,ul.makeMenu ul {
+ul.makeMenu {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	background: #eee;
+	background: -webkit-linear-gradient(top, #eee 50%, #bbb 100%);
+	background: -moz-linear-gradient(top, #eee 50%, #bbb 100%);
+	background: linear-gradient(top, #eee 50%, #bbb 100%);
+	border: solid 1px #999 !important;
+	margin: 0 10px 0 0 !important;
+	padding: 5px 10px 5px 5px !important;
+	border-radius: 3px;
+	-moz-border-radius: 3px
+	width: auto;
+	cursor: default;
+	position: relative !important;
+	text-align: left;
+	white-space: nowrap;
+}
+
+ul.makeMenu ul {
 	width: auto;
 	border: 1px solid #ddd !important;
 	background: #fff;
@@ -805,7 +823,9 @@ ul.makeMenu li {
 	font-weight: bold;
 	text-shadow: 0 1px 1px #fff;
 	color: #333 !important;
-	margin: 0
+	background: transparent !important;
+	border: none !important;
+	margin: 0;
 }
 
 ul.makeMenu li>ul {
@@ -822,8 +842,8 @@ ul.makeMenu li:hover>ul {
 	position: absolute;
 	border: 1px solid #666 !important;
 	margin-top: 9px;
-	top: -15px;
-	left: -6px;
+	top: -15px !important;
+	left: -6px !important;
 	background: #fff;
 	color: #fff;
 	box-shadow: 1px 1px 8px #555;
@@ -833,12 +853,34 @@ ul.makeMenu li:hover>ul {
 	-moz-border-radius: 3px
 }
 
-ul.makeMenu li a {
-	display: block;
+ul.makeMenuChild li {
+	display: block !important;
+	width: auto !important;
+	float: none !important;
+}
+
+ul.makeMenuChild li a {
 	width: 100%;
-	text-decoration: underline;
-	color: #35B;
-	padding: 6px
+	display: block;
+}
+
+ul.makeMenuChild li a:link {
+	font-size: 1.25em;
+	font-weight: normal;
+	color: #333;
+	text-decoration: none;
+	padding: 5px 10px
+}
+
+ul.makeMenuChild li a:hover {
+	color: #ffffff;
+	text-shadow: none;
+	background: #4383c9;
+	background: -webkit-linear-gradient(top, #4383c9 50%, #1d5da4 100%);
+	background: -moz-linear-gradient(top, #4383c9 50%, #1d5da4 100%);
+	background: linear-gradient(top, #4383c9 50%, #1d5da4 100%);
+	zoom: 1;
+	text-decoration: none !important
 }
 
 a.searchPage {
@@ -940,18 +982,6 @@ p.breadcrumb a:hover {
 	text-decoration: underline
 }
 
-ul.makeMenu {
-	font-family: "Helvetica Neue", Arial, sans-serif;
-	background: #eee;
-	background: -webkit-linear-gradient(top, #eee 50%, #bbb 100%);
-	background: -moz-linear-gradient(top, #eee 50%, #bbb 100%);
-	background: linear-gradient(top, #eee 50%, #bbb 100%);
-	border: solid 1px #999 !important;
-	margin: 0 10px 0 0 !important;
-	padding: 5px 10px 5px 5px;
-	border-radius: 3px;
-	-moz-border-radius: 3px
-}
 
 table.listHier {
 	font-family: "Helvetica Neue", Arial, sans-serif;
@@ -1157,29 +1187,6 @@ div#content {
 	background: none;
 	background: transparent;
 	border: solid 1px #aaa
-}
-
-ul.makeMenu li ul {
-	-webkit-transition: all .5s ease-in
-}
-
-ul.makeMenuChild li a:link {
-	font-size: 1.25em;
-	font-weight: normal;
-	color: #333;
-	text-decoration: none;
-	padding: 5px 10px
-}
-
-ul.makeMenuChild li a:hover {
-	color: #ffffff;
-	text-shadow: none;
-	background: #4383c9;
-	background: -webkit-linear-gradient(top, #4383c9 50%, #1d5da4 100%);
-	background: -moz-linear-gradient(top, #4383c9 50%, #1d5da4 100%);
-	background: linear-gradient(top, #4383c9 50%, #1d5da4 100%);
-	zoom: 1;
-	text-decoration: none !important
 }
 
 .listHier tr th {
@@ -1687,7 +1694,7 @@ tr td.arrowHere,.moveUp,.moveDown {
 	color: #555
 }
 
-table.hierItemBlock td,ul.makeMenuChild li {
+table.hierItemBlock td {
 	width: 100%
 }
 
