@@ -678,7 +678,7 @@ page estate
 .sakaiMinimizePageNavigation .toolMenu{
 	width:16px;
 }
-.sakaiMinimizePageNavigation #worksiteLogo, .sakaiMinimizePageNavigation #presenceWrapper{
+.sakaiMinimizePageNavigation #worksiteLogo, .sakaiMinimizePageNavigation #presenceWrapper, .sakaiMinimizePageNavigation .subSites h1 {
 	display:none
 }
 .sakaiMinimizePageNavigation .toolMenu li span,.sakaiMinimizePageNavigation .subSites li span{
