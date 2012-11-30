@@ -1,5 +1,3 @@
-/* AMIR: All comments are "for what follows" */
-
 body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: .8em;
@@ -14,7 +12,7 @@ hr.itemSeparator {
 }
 
 a:visited {
-	color: #000;
+	color: #53b;
 	text-decoration: underline
 }
 
@@ -52,27 +50,27 @@ tr.selectedMove a:link,tr.selectedMove a:visited {
 }
 
 .itemAction a,.itemAction a:link {
-	color: #1d5da4;
+	color: #27d;
 	white-space: nowrap;
 	border-bottom: none;
 	padding: .2em .3em 1px 0
 }
 
 .itemAction a:visited {
-	color: #1d5da4;
+	color: #27d;
 	text-decoration: none;
 	border-bottom: 1px solid #fff
 }
 
 .itemAction a:hover {
-	color: #000;
+	color: #27d;
 	text-decoration: underline !important
 }
 
 html>body .itemAction a:hover {
-	color: #000;
+	color: #27d;
 	text-decoration: none !important;
-	border-bottom: 1px solid #000
+	border-bottom: 1px solid #27d
 }
 
 tr.selectedMove .itemAction a:link,tr.selectedMove .itemAction a:visited
@@ -901,7 +899,7 @@ h3,h4 {
 .toolMenu li a:link,.toolMenu li a:visited {
 	text-decoration: none;
 	color: #333;
-	padding: .8em 1em
+	padding: .5em 1em
 }
 
 .siteLinkList {
@@ -1073,8 +1071,8 @@ a:hover,.specialLink a:hover {
 
 .toolMenu li.selectedTool {
 	background: #ccc;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	padding-left: 15px
 }
 
@@ -1273,7 +1271,7 @@ ul.makeMenuChild li a:hover {
 
 .siteLinkList li a:link,.siteLinkList li a:visited {
 	background: none;
-	/* AMIR: in the next line I have changed the background colour from #002E59 to #FFFFFF */
+	/* AMIR: in the next line I have changed the colour from #002E59 to #FFFFFF */
 	background: #FFFFFF;
 	border-bottom: none;
 	color: #333;
@@ -1309,15 +1307,14 @@ ul.makeMenuChild li a:hover {
 .siteNavWrap li.selectedTab a:visited,.siteNavWrap li.selectedTab a:link
 	{
 	/* AMIR: in the next line I have changed the colour from #002E59 to #FFFFFF */
-	background: url(images/chevron-right.png) no-repeat scroll left top transparent;
-	padding-left: 10px;
+	background: #FFFFFF;
 
 }
 
 .siteNavWrap li.selectedTab a span {
 	font-weight: bold;
 	background: none;
-	/* padding: 0   4.30pm 14-08-12 */
+	padding: 0
 }
 
 input[type="submit"],input[type="button"],input[type="reset"] {
@@ -1369,14 +1366,6 @@ form input[type="text"]:hover {
 
 span.indent {
 	letter-spacing: 1.8em
-}
-
-.portletBody a:visited {
-	color: #1d5da4
-}
-
-.portletBody a:hover {
-	color: #000
 }
 
 .portletBody table {
@@ -1646,27 +1635,24 @@ div.highlightPanel table.listHier.centerLines td {
 
 a:link,.navIntraTool a:visited {
 	color: #35b;
-	text-decoration: underline
+	text-decoration: none
 }
 
-/* AMIR: Some links were turning white on when mouse hovered over, changed colour to black */
-
-a:hover,a:active,a:visited,a:focus,.specialLink a:hover,.navIntraTool a:hover,.breadCrumb a:hover
+a:hover,a:active,a:focus,.specialLink a:hover,.navIntraTool a:hover,.breadCrumb a:hover
 	{
-	color: #000;
+	/* color: #fff; */
 	text-decoration: underline
 }
 
-table.calendar td a:hover,a:visited,.toolMenu li a:hover,p.paragraph a:hover,ul.star li a:hover,.rwikiRenderedContent ol li a:hover,.dhtml_more_tabs a:hover span,.searchResultsContainer a:hover,.tabHeadOn a:hover,.tabHeadOff a:hover
+table.calendar td a:hover,.toolMenu li a:hover,p.paragraph a:hover,ul.star li a:hover,.rwikiRenderedContent ol li a:hover,.dhtml_more_tabs a:hover span,.searchResultsContainer a:hover,.tabHeadOn a:hover,.tabHeadOff a:hover
 	{
 	text-decoration: underline
 }
 
-/* AMIR: I noticed the Assignment Tool was showing white-coloured hyperlinks in the permissions table, therefore removing "color: #fff;" on line 1653 -- replaced with #35B */
+/* AMIR: I noticed the Assignment Tool was showing white-coloured hyperlinks in the permissions table, therefore removing "color: #fff;" on line 1653 */
 .specialLink a:link,.specialLink a:visited,.breadCrumb a:link,.breadCrumb a:visited
 	{
 	/* color: #fff; */
-	color: #35B;
 	text-decoration: none
 }
 
@@ -1763,8 +1749,7 @@ ul.star li,.rwikiRenderedContent ol li {
 
 .siteLinkList li.more-active a,.siteLinkList li.more-active a:link,.siteLinkList li.more-active a:visited,.siteLinkList li.selectedTab a,.siteLinkList li.selectedTab a:link,.siteLinkList li.selectedTab a:visited,.siteLinkList li.selectedTab a:hover
 	{
-	font-weight: normal;
-	color: #000
+	font-weight: normal
 }
 
 .searchBottonLink,.searchItemBody {
