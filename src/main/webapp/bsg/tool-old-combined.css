@@ -1094,12 +1094,14 @@ a:hover,.specialLink a:hover {
 }
 
 .toolMenu li:hover {
-	background: #ccc;
+	background-color: #ccc;
+	background-color: rgba(0,0,0,0.15);
 	text-shadow: none
 }
 
 .toolMenu li.selectedTool {
-	background: #ccc;
+	background-color: #ccc;
+	background-color: rgba(0,0,0,0.15);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 15px
