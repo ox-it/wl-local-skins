@@ -1285,6 +1285,12 @@ background-image: url(/library/image/silk/comment.png);
 .icon-sakai-subsite{
 	background-image: url(images/subsite.png);
 }
+.icon-sakai-redirect-external{
+	background-image: url(/library/image/silk/link_go.png);
+}
+.icon-sakai-redirect-internal{
+	background-image: url(/library/image/silk/link.png);
+} 
 .icon-sakai-basiclti { 
 	background-image: url(/library/image/silk/application_go.png); 
 }
