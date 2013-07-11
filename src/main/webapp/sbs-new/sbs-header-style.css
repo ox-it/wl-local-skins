@@ -1,0 +1,123 @@
+#relatedLinks {
+    display: none;
+}
+
+#mastBanner a img {
+    display: none;
+}
+
+#mastBanner a {
+	display: block;
+	width: 100%;
+	height: 75px;
+}
+
+
+#mastHead {
+    background-color: #000;
+    background: url('./images/weblearn_banner_SBS3.png') no-repeat;
+    height: 80px;
+    width: 100%;
+    margin: 0;
+	padding: 0;
+}
+
+
+
+.siteNavWrap {
+	border: 0px;
+}
+
+#loginLinks {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-family: Helvetica;
+    text-shadow: 1px 1px 1px #005;
+}
+
+#loginLinks a, a:visited {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#loginLinks a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/* AMIR: removing the rest of this code...
+div.siteNavWrap{
+    height: 0px;
+    margin-bottom: 20px;
+}
+
+div #roleSwitch {
+    padding-right: 15px;
+}
+
+div#roleSwitch a {
+    color: #555;
+}
+
+#roleSwitch a#roleSwitchAnchor {
+    margin: 0 0.2em 0 0;
+}
+
+.siteLinkList li {
+	border: 0px;
+}
+
+.siteLinkList li a, .siteLinkList li a:link, .siteLinkList li a:visited {
+	color: #fff;
+	text-shadow: 0px 1px 0px #005;
+    background: none;
+    border: 0px;
+}
+
+.siteLinkList li a span {
+	color: #fff;
+	text-shadow: #005;
+}
+
+.siteLinkList li span {
+    background: none;
+}
+
+.siteLinkList li.more-tab a span.inner {
+	background-image: url(images/tab-arrow-down.gif);
+}
+
+.siteLinkList li.more-tab a {
+	padding-right: 0px;
+}
+
+#mastLogin a:link, #mastLogin a:visited {
+	color: #fff;
+	text-shadow: #005;
+}
+
+
+div.linkNav {
+    margin-left: -1200px;
+    background-color: transparent;
+}
+
+div.linkNav.personalSites {
+    display: block;
+    position: absolute;
+    top: -46px;
+	right: 0px;
+    background-color: transparent;
+}
+
+div#content {
+	padding-top: 0em;
+}
+
+div#toolMenuWrap {
+	padding-top: 0.4em;
+}
+*/
