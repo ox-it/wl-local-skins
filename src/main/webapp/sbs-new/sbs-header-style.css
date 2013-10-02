@@ -39,15 +39,16 @@
 }
 
 #loginLinks a, a:visited {
-    color: #fff;
+    /* color: #fff; */
     text-decoration: none;
     margin-top: 10px;
 }
 
 #loginLinks a:hover {
-    color: #fff;
+    /* color: #fff; */
     text-decoration: underline;
 }
+
 /* AMIR: removing the rest of this code...
 div.siteNavWrap{
     height: 0px;

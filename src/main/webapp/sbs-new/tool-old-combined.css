@@ -1410,7 +1410,8 @@ p.indnt1 {
 .siteLinkList li.more-active a:link,.siteLinkList li.more-active a:visited
 	{
 	background: transparent;
-	font-weight: bold
+	font-weight: bold;
+	color: #333;
 }
 
 .siteLinkList li.more-active span.outer {
@@ -1640,7 +1641,7 @@ a:link,.navIntraTool a:visited {
 
 a:hover,a:active,a:focus,.specialLink a:hover,.navIntraTool a:hover,.breadCrumb a:hover
 	{
-	color: #fff;
+	color: #000; 
 	text-decoration: underline
 }
 
@@ -1719,7 +1720,8 @@ table.hierItemBlock td,ul.makeMenuChild li {
 }
 
 .presenceBody,table.listHier.messagesThreaded tr:hover {
-	background: #fff
+	background: #fff;
+	color: #000
 }
 
 body a,.navIntraTool a:link,p.paragraph a,ul.star li a,.searchResultsContainer a:link,.toolMenu li.selectedTool a:hover,.siteLinkList li.more-active a:hover
@@ -1805,4 +1807,9 @@ table.nolines tr td,#participant-body table.listHier.nolines tr td {
 .ambrosiaInterface input[type="button"] {
 	border: none;
 	color: #333
+}
+
+a:link,.navIntraTool a:visited {
+	color: #35b;
+	text-decoration: underline
 }
