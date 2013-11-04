@@ -783,7 +783,7 @@ page estate
 
 /*wrapper for all elements of presence display */
 #presenceWrapper{
-	width: 100%
+	width: 100%;
 	margin-top: .5em;
 }
 
